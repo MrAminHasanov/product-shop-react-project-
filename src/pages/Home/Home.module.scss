@@ -1,0 +1,40 @@
+// #region Variebles
+$salat:#7fad39;
+$bd-color:rgb(216, 215, 215);
+$lg-textcolor:rgb(85, 85, 85);
+// #endregion
+.bar_1{
+    margin-left: 25%;
+    position: relative;
+    background-color: rgb(248, 243, 194);
+    height:26.5em;
+    &_box{
+        position: absolute;
+        top: 6em;
+        left: 3em;
+        &>*{
+            padding: 0.4em 0px;
+        }
+        &_1{
+            letter-spacing: 3px;
+            color: $salat;
+            font-weight: 800;
+        }
+        &_2{
+            font-weight: 800;
+            font-size: 2.5em;
+        }
+        &_3{
+            color: $lg-textcolor;
+        }
+        &_4{
+            button{
+                border: none;
+                font-weight: 800;
+                color: white;
+                background-color: $salat;
+                padding: 1em 2.4em;
+            }
+        }
+    }
+}
