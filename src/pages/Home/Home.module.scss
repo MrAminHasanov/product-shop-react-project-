@@ -42,12 +42,18 @@ $lg-textcolor:rgb(85, 85, 85);
     padding-top: 8em;
     &_head{
         h2{
-            text-align: center;
+            text-align: center; 
             font-size: 2em;
             font-weight: 800;
             position: relative;
             &::after{
-                content: "_";
+                top:115%;
+                transform: translateX(-50%);
+                left: 50%;
+                content: " ";
+                width: 70px;
+                height: 4px;
+                background-color: #7fad39;
                 color: #7fad39;
                 position: absolute;
             }
@@ -58,5 +64,10 @@ $lg-textcolor:rgb(85, 85, 85);
             justify-content: space-evenly;
             padding: 2.5em 20em;
         }
+    }
+    &_content{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
     }
 }

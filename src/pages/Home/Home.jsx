@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Carusel from '../../comnponents/Carusel/Carusel'
+import Product from '../../comnponents/Product/Product'
+import { ProductContext } from '../../context/ProductContext/ProductContext'
 import c from "./Home.module.scss"
 
 function Home() {
+  const { productList } = useContext(ProductContext);
   return (
     <>
       <div className={c.bar_1}>
@@ -26,6 +29,11 @@ function Home() {
             <li>Vegetables</li>
             <li>Fastfood</li>
           </ul>
+        </div>
+        <div className={c.bar_3_content}>
+          {
+            productList.map(product => <Product product={product}/>)
+          }
         </div>
       </div>
     </>

@@ -4,14 +4,19 @@ $bd-color:rgb(216, 215, 215);
 $lg-textcolor:rgb(85, 85, 85);
 // #endregion
 
+.carusel_{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+}
 .carusel{
     position: relative;
-    width: 100%;
+    width: 96%;
     height: 240px;
     margin: 2.5em 0px;
     overflow: hidden;
     &_rotate{
-        transition: .4s ease all;
+        transition: .8s ease all;
         display: flex;
         height: 100%;
         position: relative;
@@ -28,6 +33,9 @@ $lg-textcolor:rgb(85, 85, 85);
     top: 50%;
     border: 1px solid $bd-color;
     &_after{
-        right: 0;
+        right: -4px;
+    }
+    &_before{
+        left: -4px;
     }
 }
