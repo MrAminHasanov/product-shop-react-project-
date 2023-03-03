@@ -38,3 +38,25 @@ $lg-textcolor:rgb(85, 85, 85);
         }
     }
 }
+.bar_3{
+    padding-top: 8em;
+    &_head{
+        h2{
+            text-align: center;
+            font-size: 2em;
+            font-weight: 800;
+            position: relative;
+            &::after{
+                content: "_";
+                color: #7fad39;
+                position: absolute;
+            }
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 2.5em 20em;
+        }
+    }
+}

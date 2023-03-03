@@ -1,0 +1,24 @@
+.carusel_box{
+    min-width: 20%;
+    height: 100%;
+    margin-left:4% ;
+    padding: 1em;
+    background-color: rgb(220, 243, 240);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    img{
+        height: 80%;
+        max-width: 100%;
+    }
+    div{
+        user-select: none;
+        background-color: white;
+        padding: 0.2em 0;
+        margin-top:1em;
+        width: 100%;
+        font-size: 1em;
+        font-weight: 800;
+        text-align: center;
+    }
+}

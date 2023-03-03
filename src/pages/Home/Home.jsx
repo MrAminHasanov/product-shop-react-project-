@@ -14,7 +14,19 @@ function Home() {
         </div>
       </div>
       <div className={c.bar_2}>
-        <Carusel/>
+        <Carusel />
+      </div>
+      <div className={c.bar_3}>
+        <div className={c.bar_3_head}>
+          <h2>Featured Product</h2>
+          <ul>
+            <li>All</li>
+            <li>Oranges</li>
+            <li>Fresh Meat</li>
+            <li>Vegetables</li>
+            <li>Fastfood</li>
+          </ul>
+        </div>
       </div>
     </>
   )
