@@ -1,21 +1,25 @@
 .carusel_box{
+    border-radius: 1.5em;
     min-width: 20%;
     height: 100%;
-    margin-left:4% ;
+    margin-left:4%;
     padding: 1em;
     background-color: rgb(220, 243, 240);
     display: flex;
     align-items: center;
     flex-direction: column;
     img{
+        border-top-left-radius:1.5em;
+        border-top-right-radius:1.5em;
         height: 80%;
         max-width: 100%;
     }
     div{
+        border-bottom-left-radius:1.5em;
+        border-bottom-right-radius:1.5em;
         user-select: none;
         background-color: white;
         padding: 0.2em 0;
-        margin-top:1em;
         width: 100%;
         font-size: 1em;
         font-weight: 800;

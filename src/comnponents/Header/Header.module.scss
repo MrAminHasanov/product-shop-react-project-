@@ -4,6 +4,10 @@ $bd-color:rgb(216, 215, 215);
 $lg-textcolor:rgb(85, 85, 85);
 // #endregion
 *{
+    img{
+        pointer-events: none;
+    }
+    user-select: none;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
