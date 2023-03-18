@@ -38,20 +38,6 @@ $lg-textcolor:rgb(85, 85, 85);
         }
     }
 }
-.line{
-    &::after{
-        top:115%;
-        transform: translateX(-50%);
-        left: 50%;
-        content: " ";
-        width: 110%;
-        border-radius: 8px;
-        height: 4px;
-        background-color: #7fad39;
-        color: #7fad39;
-        position: absolute;
-    }   
-}
 .bar_3{
     padding-top: 8em;
     &_head{
@@ -61,7 +47,7 @@ $lg-textcolor:rgb(85, 85, 85);
             font-weight: 800;
             position: relative;
             &::after{
-                width: 70px;
+                width: 70px!important;
             }
         }
         ul{
@@ -84,5 +70,19 @@ $lg-textcolor:rgb(85, 85, 85);
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
+    }
+    .line{
+        &::after{
+            top:115%;
+            transform: translateX(-50%);
+            left: 50%;
+            content: " ";
+            width: 110%;
+            border-radius: 8px;
+            height: 4px;
+            background-color: #7fad39;
+            color: #7fad39;
+            position: absolute;
+        }   
     }
 }
