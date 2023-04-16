@@ -2,237 +2,46 @@
 $salat: #7fad39;
 $bd-color: rgb(216, 215, 215);
 $lg-textcolor: rgb(85, 85, 85);
-
 // #endregion
-* {
-    img {
-        pointer-events: none;
-    }
 
-    user-select: none;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Cairo",
-    sans-serif;
-}
-
-body {
-    padding: 0px 6%;
-}
 
 .header {
     width: 100%;
+    padding-bottom:1em ;
     display: grid;
     grid-template-columns: 23% 50% 23%;
     grid-template-rows: 1fr 1fr;
-    grid-gap: 2%;
+    grid-row-gap: 1em;
+    grid-column-gap: 2%;
+    grid-template-areas: 
+        "Logo Nav Accaount"
+        "Prodlist Search Contact"
+    ;
     padding: 10px 0px;
-
-    &_box {
-        width: 100%;
-
-        &_2 {
-            ul {
-                user-select: none;
-                display: flex;
-                justify-content: space-around;
-                list-style: none;
-                letter-spacing: 2px;
-                height: 100%;
-                align-items: center;
-                font-weight: 700;
-
-                li {
-                    cursor: pointer;
-                    transition: .5s ease all;
-
-                    &:hover {
-                        color: $salat;
-                    }
-                }
-            }
+    @media only screen and (max-width: 1000px) {
+        grid-template-columns: 45% 25.5% 25.5%;
+        grid-template-rows: 54px 54px auto 54px;
+        display: grid;
+        grid-template-areas:
+            "Logo Nav Nav"
+            "Accaount Accaount Accaount"
+            "Prodlist Prodlist Prodlist"
+            "Search Search Contact"
+            ;
+    }
+    @media only screen and (max-width: 800px) {
+        body{
+            padding: 0px 3%;
         }
-
-        &_3 {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-
-            &>div {
-                display: flex;
-                height: 100%;
-                align-items: center;
-                justify-content: space-between;
-                width: 3.5em;
-
-                &>div {
-                    position: relative;
-                    &>div {
-                        &::before {
-                            content: " ";
-                            position: absolute;
-                            border: 0.5em solid transparent;
-                            border-bottom: $salat 0.5em solid;
-                            left: 50%;
-                            transform: translate(-50%,-40%);
-                        }
-                        &>div {
-                            position: absolute;
-                            z-index: 1;
-                            padding: 10px;
-                            padding-top: 0px;
-                            border: 2px solid rgb(0, 0, 0);
-                            width: 280px;
-                            height: 310px;
-                            overflow-y: auto;
-                            background-color: white;
-                            transform: translateX(-50%);
-                            left: 50%;
-                            top: 150%;
-
-                        }
-                    }
-
-                    i {
-                        cursor: pointer;
-                        z-index: 2;
-                        position: relative;
-                        transition: all .5s;
-                        font-size: 1.3em;
-
-                        >&:hover {
-                            color: $salat;
-                        }
-                    }
-                }
-            }
-
-
-            b {
-                padding-left: 12px;
-            }
-        }
-
-        &_4 {
-            position: relative;
-
-            button {
-                border: 1px solid $salat;
-                width: 100%;
-                height: 100%;
-                color: white;
-                display: flex;
-                align-items: center;
-                justify-content: space-around;
-                background-color: $salat;
-                padding: 7px 0px;
-                font-weight: 800;
-                font-size: 1em;
-                cursor: pointer;
-                transition: all 2s ease;
-
-                i {
-                    font-size: 0.8em;
-                    position: absolute;
-                    right: 5%;
-                    align-items: center;
-                }
-            }
-
-            ul {
-                height: 444px;
-                position: absolute;
-                color: black;
-                list-style: none;
-                border: 1px solid $bd-color;
-                width: 100%;
-                overflow: hidden;
-                transition: .5s all ease;
-
-                li {
-                    padding: 9px 34px;
-                    color: $lg-textcolor;
-                    text-align: left;
-                }
-            }
-        }
-
-        &_5 {
-            display: flex;
-            width: 100%;
-
-            >* {
-                border: 1px solid $bd-color;
-                outline: none;
-            }
-
-            input {
-                width: 60%;
-                border: 1px 0px;
-                padding-left: 23px;
-                font-size: 1em;
-
-                &::placeholder {
-                    color: $bd-color;
-                }
-            }
-
-            button {
-                &:first-child {
-                    display: flex;
-                    justify-content: space-evenly;
-                    align-items: center;
-                    font-size: 1em;
-                    width: 26%;
-                    font-weight: 700;
-                    background-color: white;
-
-                    i {
-                        font-size: 0.7em;
-                    }
-                }
-
-                &:last-child {
-                    border: none;
-                    width: 18%;
-                    background-color: $salat;
-                    color: white;
-                }
-            }
-        }
-
-        &_6 {
-            display: flex;
-            justify-content: flex-end;
-
-            i {
-                position: relative;
-                border-radius: 50%;
-                width: 3.2em;
-                color: $salat;
-                background-color: rgb(243, 243, 243);
-
-                &::before {
-                    position: absolute;
-                    left: 50%;
-                    top: 50%;
-                    transform: translate(-50%, -50%);
-                }
-            }
-
-            div {
-                height: 104%;
-                padding-left: 0.5em;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-
-                div:last-child {
-                    color: $lg-textcolor;
-                    font-size: 0.8em;
-                }
-            }
-        }
+        grid-template-columns: 45% 25.5% 25.5%;
+        grid-template-rows: auto 54px auto 54px 54px;
+        display: grid;
+        grid-template-areas:
+            "Logo Nav Nav"
+            "Accaount Accaount Accaount"
+            "Prodlist Prodlist Prodlist"
+            "Search Search Search"
+            "Contact Contact Contact"
+            ;
     }
 }

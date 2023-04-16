@@ -1,0 +1,16 @@
+.button {
+    width: 35px;
+    display: none;
+    margin: auto 0px;
+    div {
+        &:nth-child(2) {
+            margin: 8px 0px;
+        }
+        border-radius: 6px;
+        height: 3px;
+        background-color: black;
+    }
+    @media only screen and (max-width: 1000px) {
+        display: block;
+    }
+}

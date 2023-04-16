@@ -1,0 +1,28 @@
+// #region Variebles
+$salat: #7fad39;
+$bd-color: rgb(216, 215, 215);
+$lg-textcolor: rgb(85, 85, 85);
+// #endregion
+
+.HeadAccaount {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 1em;
+    justify-content : end;
+    i {
+        content: "";
+        cursor: pointer;
+        z-index: 2;
+        position: relative;
+        transition: all 0.5s;
+        font-size: 1.3em;
+        > &:hover {
+            color: $salat;
+        }
+    }
+    @media only screen and (max-width: 1000px) {
+        justify-content: center;
+        grid-area: Accaount;
+    }
+}

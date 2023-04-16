@@ -1,0 +1,49 @@
+// #region Variebles
+$salat: #7fad39;
+$bd-color: rgb(216, 215, 215);
+$lg-textcolor: rgb(85, 85, 85);
+// #endregion
+.HeadSearch{
+    display: flex;
+    width: 100%;
+    grid-area: Search;
+
+    >* {
+        border: 1px solid $bd-color;
+        outline: none;
+    }
+
+    input {
+        width: 60%;
+        border: 1px 0px;
+        padding-left: 23px;
+        font-size: 1em;
+
+        &::placeholder {
+            color: $bd-color;
+        }
+    }
+
+    button {
+        &:first-child {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            font-size: 1em;
+            width: 26%;
+            font-weight: 700;
+            background-color: white;
+
+            i {
+                font-size: 0.7em;
+            }
+        }
+
+        &:last-child {
+            border: none;
+            width: 18%;
+            background-color: $salat;
+            color: white;
+        }
+    }
+}

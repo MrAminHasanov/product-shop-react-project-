@@ -1,0 +1,31 @@
+// #region Variebles
+$salat: #7fad39;
+$bd-color: rgb(216, 215, 215);
+$lg-textcolor: rgb(85, 85, 85);
+// #endregion
+
+.List {
+    user-select: none;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    letter-spacing: 2px;
+    align-items: center;
+    font-weight: 700;
+    height: 100%;
+    li {
+        cursor: pointer;
+        transition: 0.5s ease all;
+
+        &:hover {
+            color: $salat;
+        }
+    }
+
+    @media only screen and (max-width: 1000px) {
+        // display: none;
+        flex-direction: column;
+        justify-content: normal;
+
+    }
+}
