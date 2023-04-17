@@ -1,57 +1,35 @@
-import React, { useContext, useEffect, useState } from "react";
-import { ProductContext } from "../../context/ProductContext/ProductContext";
-import c from "./Carusel.module.scss";
-import CaruselBox from "./CaruselBox/CaruselBox";
+import { useContext, useState } from 'react'
+import { ProductContext } from '../../context/ProductContext/ProductContext'
+import CaruselBox from './CaruselBox/CaruselBox'
+
+import c from './Carusel.module.scss'
 
 function Carusel() {
-  const { productTypeList } = useContext(ProductContext);
-  const [caruselLenght, setCaruselLenght] = useState(4);
-  let boxMovingCof;
-  const [caruselWidth, setCaruselWidth] = useState("");
-  useEffect(() => {
-    setCaruselLenght(document.getElementsByClassName(c.carusel_));
-  }, []);
+  const { productTypeList } = useContext(ProductContext)
+  const [position, setPosition] = useState(0)
 
-  const [boxMoving, setBoxMoving] = useState(0);
-
-  useEffect(() => {
-    if (boxMoving === 1) {
-      setBoxMoving(caruselLenght);
-    } else if (boxMoving === caruselLenght - 1) {
-      setBoxMoving(0);
-    }
-    // const interval = setInterval(() => {
-    //   setBoxMoving(boxMoving - 1);
-    // }, 3000);
-    // return () => clearInterval(interval);
-  }, [boxMoving, caruselLenght]);
-
+  const handleClickBack = () => position !== 0?setPosition((prev) => prev - 1):null
+  const handleClickForward = () => setPosition((prev) => prev + 1)
+  
   return (
-    <div className={c.carusel_}>
-      <div
-        className={`${c.button} ${c.button_before}`}
-        onClick={() => setTimeout(() => setBoxMoving(boxMoving + 1), 600)}
-      >
-        {"<"}
-      </div>
-      <div className={c.carusel}>
-        <div
-          className={c.carusel_rotate}
-          style={{ left: boxMoving * 24 + "%" }}
-        >
-          {productTypeList.map((i, j) => (
-            <CaruselBox key={j} info={i} />
+    <div className={c.component}>
+      <button className={c.button} onClick={handleClickBack}>
+        {'<'}
+      </button>
+      <div className={c.carouselWrapper}> 
+        <ul style={{ '--position': position,'--caruselLenght': productTypeList.length }} className={c.carousel}>
+          {productTypeList.map((item,index) => (
+            <li key={index}>
+              <CaruselBox key={item.name} info={item} />
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
-      <div
-        className={`${c.button} ${c.button_after}`}
-        onClick={() => setTimeout(() => setBoxMoving(boxMoving - 1), 600)}
-      >
-        {">"}
-      </div>
+      <button className={c.button} onClick={handleClickForward}>
+        {'>'}
+      </button>
     </div>
-  );
+  )
 }
 
-export default Carusel;
+export default Carusel

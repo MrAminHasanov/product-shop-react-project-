@@ -1,11 +1,13 @@
 import React from 'react'
-import c from "./CaruselBox.module.scss"
+import c from './CaruselBox.module.scss'
 
-function CaruselBox({info}) {
+function CaruselBox({ info }) {
   return (
-    <div className={c.carusel_box} style={{backgroundColor:info.bg}}>
-      <img src={info.img} alt={info.name}></img>
-      <div>{info.name}</div>
+    <div className={c.component} style={{ borderColor: info.bg }}>
+      <div className={c.inner}>
+        <img className={c.image} src={info.img} alt={info.name}></img>
+        <div className={c.title}>{info.name}</div>
+      </div>
     </div>
   )
 }

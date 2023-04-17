@@ -1,41 +1,43 @@
 // #region Variebles
-$salat:#7fad39;
-$bd-color:rgb(216, 215, 215);
-$lg-textcolor:rgb(85, 85, 85);
+$salat: #7fad39;
+$bd-color: rgb(216, 215, 215);
+$lg-textcolor: rgb(85, 85, 85);
 // #endregion
 
-.carusel_{
-    position: relative;
-    display: flex;
-    justify-content: space-evenly;
+.component {
+  --columns: 4;
+  --gap: 46px;
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 16px;
+  align-items: center;
+  @media (max-width: 900px) {
+    --columns: 2;
+  }
 }
-.carusel{
-    position: relative;
-    width: 96%  ;
-    height: 240px;
-    margin: 2.5em 0px;
-    overflow: hidden;
-    &_rotate{
-        transition: .8s ease all;
-        display: flex;
-        height: 100%;
-        position: relative;
-    }
+
+.carouselWrapper {
+  width: 100%;
+  overflow: hidden;
 }
-.button{
-    z-index: 3;
-    user-select: none;
-    background-color: white;
-    font-size: 1.5em;
-    padding: 18px 6px;
-    transform: translateY(-50%);
-    position: absolute;
-    top: 50%;
-    border: 1px solid $bd-color;
-    &_after{
-        right: -4px;
-    }
-    &_before{
-        left: -4px;
-    }
+
+.carousel {
+  --column-width: calc((100% - (var(--gap) * (var(--columns) - 1))) / var(--columns));
+  transform: translateX(calc(var(--position) * (var(--column-width) + var(--gap)) * -1));
+  display: grid;
+  grid-auto-flow: column; 
+  gap:var(--gap);
+  grid-auto-columns: var(--column-width);
+  transition: transform 0.3s ease;
+  list-style-type: none;
+}
+
+.button {
+  align-items: center;
+  height: 40%;
+  font-size: 1.4em;
+  border-color: rgb(216, 215, 215)  ;
+  // background: rgb(190, 239, 248);
+  padding: 4px;
 }
