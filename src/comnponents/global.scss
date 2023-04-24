@@ -14,9 +14,19 @@ body {
     display: flex;
     justify-content: space-evenly;
     & > div {
-        width: 1150px;
-        @media only screen and (max-width: 1200px) {
+        width: 1350px;
+        @media only screen and (max-width: 1400px) {
             & {
+                width: 1250px;
+            }
+        }
+        @media only screen and (max-width: 1300px) {
+            & {
+                width: 1150px;
+            }
+        }
+        @media only screen and (max-width: 1200px) {
+            & { 
                 width: 1050px;
             }
         }
@@ -47,12 +57,22 @@ body {
         }
         @media only screen and (max-width: 600px) {
             & {
-                width: 450px;
+                width: 500px;
             }
         }
-        @media only screen and (max-width: 500px) {
+        @media only screen and (max-width: 525px) {
+            & {
+                width: 425px;
+            }
+        }
+        @media only screen and (max-width: 450px) {
             & {
                 width: 350px;
+            }
+        }
+        @media only screen and (max-width: 375px) {
+            & {
+                width: 325px;
             }
         }
     }

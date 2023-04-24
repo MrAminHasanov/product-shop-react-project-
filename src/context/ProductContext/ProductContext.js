@@ -3,11 +3,11 @@ import productImg from './img/product_img/Product_img';
 import productTypeImg from './img/productType_img/productType_img';
 import { v4 as uuidv4 } from 'uuid';
 import favoriteReducer from '../../reducers/favorite-reducer';
+// import data from './ProductData/ProductType.json'
 
 export const ProductContext = createContext();
 const productType={vegetables:"Vegetables",fruite:"Fruite",dairyProduct:"Dairy product",meat:"Meat",fruite:"Fruite",driedFruite:"Dried fruite",drinkFruite:"Drink fruite"}
 function ProductProvider(props) {
-    
     const [productList, setProductList] = useState(
         [
             { name: "Onion", price: 1.5, id: uuidv4(), type: productType.vegetables, img: productImg.onion },
@@ -15,7 +15,7 @@ function ProductProvider(props) {
             { name: "Carrot", price: 1, id: uuidv4(), type: productType.vegetables, img: productImg.carrot },
             { name: "Milk", price: 3, id: uuidv4(), type: productType.dairyProduct, img: productImg.milk },
             { name: "Cheese", price: 4, id: uuidv4(), type: productType.dairyProduct, img: productImg.chees },
-            { name: "Haram beef", price: 15, id: uuidv4(), type: productType.meat, img: productImg.beef },
+            { name: "Halal beef", price: 15, id: uuidv4(), type: productType.meat, img: productImg.beef },
             { name: "Chicken", price: 6, id: uuidv4(), type: productType.meat, img: productImg.chicken },
             { name: "Apple", price: 3, id: uuidv4(), type: productType.fruite, img: productImg.apple },
             { name: "Orange", price: 4, id: uuidv4(), type: productType.fruite, img: productImg.orange },

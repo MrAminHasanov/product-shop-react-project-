@@ -5,39 +5,40 @@ $lg-textcolor: rgb(85, 85, 85);
 // #endregion
 
 .component {
-  --columns: 4;
-  --gap: 46px;
   margin-top: 32px;
   display: grid;
   grid-template-columns: auto 1fr auto;
   gap: 16px;
   align-items: center;
-  @media (max-width: 900px) {
-    --columns: 2;
-  }
 }
-
 .carouselWrapper {
   width: 100%;
   overflow: hidden;
 }
-
-.carousel {
-  --column-width: calc((100% - (var(--gap) * (var(--columns) - 1))) / var(--columns));
-  transform: translateX(calc(var(--position) * (var(--column-width) + var(--gap)) * -1));
-  display: grid;
-  grid-auto-flow: column; 
-  gap:var(--gap);
-  grid-auto-columns: var(--column-width);
-  transition: transform 0.3s ease;
-  list-style-type: none;
+:root{
+  --columns: 4;
+  --gap: 46px;
+  @media (max-width: 900px) {
+    --columns: 2;
+  }
 }
-
+.carousel {
+  --column-width: calc((-1 * (var(--gap) * (var(--columns) - 1)) + 100%) / var(--columns));
+  transform: translateX((calc(var(--position) * (var(--column-width) + var(--gap)) * -1)));
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: var(--column-width);
+  gap: var(--gap);
+  list-style-type: none;
+  transition: transform 0.3s ease;
+}
 .button {
   align-items: center;
   height: 40%;
   font-size: 1.4em;
-  border-color: rgb(216, 215, 215)  ;
-  // background: rgb(190, 239, 248);
+  border-color: rgb(216, 215, 215);
   padding: 4px;
 }
+
+
+

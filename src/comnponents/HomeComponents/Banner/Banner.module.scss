@@ -5,6 +5,15 @@ $lg-textcolor: rgb(85, 85, 85);
 // #endregion
 
 .banner {
+    @media (max-width:700px){
+        font-size: 13px;
+    }
+    @media (max-width:600px){
+        font-size: 11px;
+    }
+    @media (max-width:500px){
+        font-size: 9px;
+    }
     margin-left: 25%;
     position: relative;
     background: rgb(113, 231, 75);

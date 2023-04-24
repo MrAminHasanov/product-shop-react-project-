@@ -3,26 +3,19 @@ import c from "./ProductSectionHead.module.scss";
 import { ProductContext } from "../../../../context/ProductContext/ProductContext";
 
 function ProductSectionHead({ selectedProductType, setSelectedProductType }) {
-  const { productTypeList } = useContext(ProductContext);
+  const { productTypeList} = useContext(ProductContext);
+  const productTypeNameList=["All",...productTypeList.map((product)=> product.name)]
   return (
     <div className={c.ProductSectionHead}>
-      <h2 className={c.textLine}>Featured Product</h2>
-      <ul>
-        <li
-          className={selectedProductType === "All" ? c.textLine : null}
-          onClick={() => setSelectedProductType("All")}
-        >
-          All
-        </li>
-        {productTypeList.map((productType, i) => (
+      <h2 className={`${c.textLine} , ${c.title}`}>Featured Product</h2>
+        <ul>
+        {productTypeNameList.map((productTypeName, i) => 
+        (
           <li
             key={i}
-            className={
-              selectedProductType === productType.name ? c.textLine : null
-            }
-            onClick={() => setSelectedProductType(productType.name)}
-          >
-            {productType.name}
+            className={selectedProductType === productTypeName ? c.textLine : null}
+              onClick={() => setSelectedProductType(productTypeName)}>
+            {productTypeName}
           </li>
         ))}
       </ul>
