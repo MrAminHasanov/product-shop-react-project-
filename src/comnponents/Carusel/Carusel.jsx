@@ -11,27 +11,29 @@ function Carusel() {
   useEffect(() => {
     setCaruselColumns(
       window
-      .getComputedStyle(document.querySelector(`.${c.carousel}`))
-      .getPropertyValue("--columns")
-      );
-    } , []);
-  const caruselLength=productTypeList.length - caruselColumns;
+        .getComputedStyle(document.querySelector(`.${c.carousel}`))
+        .getPropertyValue("--columns")
+    );
+  }, []);
+  const caruselLength = productTypeList.length - caruselColumns;
 
-  const handleClickBack = () => setPosition((prev) => prev - 1);
-  const handleClickForward = () => setPosition((prev) => prev + 1);
-
-  useEffect(()=>{
-    const length=caruselLength-caruselColumns;
-    if(position===-1){
+  useEffect(() => {
+    if (position === -1) {
       setPosition(caruselLength);
-    }else if(position===caruselLength+1){
-      setPosition(0)
+    } else if (position === caruselLength + 1) {
+      setPosition(0);
     }
-
-  },[position,caruselColumns,caruselLength])
+    const interval = setInterval(() => {
+      setPosition(position + 1);
+    }, 3500);
+    return () => clearInterval(interval);
+  }, [position, caruselLength]);
   return (
     <div className={c.component}>
-      <button className={c.button} onClick={handleClickBack}>
+      <button
+        className={c.button}
+        onClick={() => setTimeout(() => setPosition(() => position - 1), 600)}
+      >
         {"<"}
       </button>
       <div className={c.carouselWrapper}>
@@ -48,7 +50,10 @@ function Carusel() {
           ))}
         </ul>
       </div>
-      <button className={c.button} onClick={handleClickForward}>
+      <button
+        className={c.button}
+        onClick={() => setTimeout(() => setPosition(() => position + 1), 600)}
+      >
         {">"}
       </button>
     </div>
