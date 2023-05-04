@@ -5,6 +5,7 @@ import CaruselBox from "./CaruselBox/CaruselBox";
 import c from "./Carusel.module.scss";
 
 function Carusel() {
+
   const { productTypeList } = useContext(ProductContext);
   const [position, setPosition] = useState(0);
   const [caruselColumns, setCaruselColumns] = useState(0);
@@ -15,6 +16,7 @@ function Carusel() {
         .getPropertyValue("--columns")
     );
   }, []);
+  
   const caruselLength = productTypeList.length - caruselColumns;
 
   useEffect(() => {
@@ -28,6 +30,7 @@ function Carusel() {
     }, 3500);
     return () => clearInterval(interval);
   }, [position, caruselLength]);
+
   return (
     <div className={c.component}>
       <button

@@ -7,7 +7,7 @@ function HeadSearch() {
       <button>
         All categories
         <i className="fa-solid fa-arrow-down"></i>
-      </button>
+      </button> 
       <input placeholder="What do you need?"></input>
       <button>SEARCH</button>
     </div>

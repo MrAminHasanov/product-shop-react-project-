@@ -1,5 +1,5 @@
 
-// [
+// const productTypeList=[
 //     {
 //         "name": "Vegetables", "img": productTypeImg.vegatebels, "bg": "#537423"
 //     },

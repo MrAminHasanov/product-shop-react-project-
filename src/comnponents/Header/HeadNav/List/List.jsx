@@ -1,6 +1,6 @@
 import c from "./List.module.scss";
 
-function List({ listOnOff }) {
+function List() {
   return (
     <ul className={c.List}>
       <li>HOME</li>

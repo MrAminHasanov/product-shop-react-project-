@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { ProductContext } from "../../context/ProductContext/ProductContext";
 import c from "./Product.module.scss";
+import { ProductContext } from "../../../context/ProductContext/ProductContext";
 
 function Product({ product, visability}) {
     const { shopList, setshopList,favoriteList,favoriteListDispatch}= useContext(ProductContext)

@@ -4,9 +4,14 @@ $bd-color: rgb(216, 215, 215);
 $lg-textcolor: rgb(85, 85, 85);
 // #endregion
 .HeadSearch{
-    display: flex;
-    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 57% 18%;
     grid-area: Search;
+    height: 80%;
+    margin: auto 0px;
+    @media (max-width:525px){
+        flex-direction: column;
+    }
 
     >* {
         border: 1px solid $bd-color;
@@ -14,7 +19,6 @@ $lg-textcolor: rgb(85, 85, 85);
     }
 
     input {
-        width: 60%;
         border: 1px 0px;
         padding-left: 23px;
         font-size: 1em;
@@ -30,18 +34,21 @@ $lg-textcolor: rgb(85, 85, 85);
             justify-content: space-evenly;
             align-items: center;
             font-size: 1em;
-            width: 26%;
             font-weight: 700;
             background-color: white;
-
+            
             i {
                 font-size: 0.7em;
             }
+            @media (max-width:700px){
+                font-size: 0.9em;
+            }
         }
+        
+        cursor: pointer;
 
         &:last-child {
             border: none;
-            width: 18%;
             background-color: $salat;
             color: white;
         }

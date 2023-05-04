@@ -5,8 +5,8 @@ import { v4 as uuidv4 } from 'uuid';
 import favoriteReducer from '../../reducers/favorite-reducer';
 // import data from './ProductData/ProductType.json'
 
+export const productType={vegetables:"Vegetables",fruite:"Fruite",dairyProduct:"Dairy product",meat:"Meat",driedFruite:"Dried fruite",drinkFruite:"Drink fruite"}
 export const ProductContext = createContext();
-const productType={vegetables:"Vegetables",fruite:"Fruite",dairyProduct:"Dairy product",meat:"Meat",fruite:"Fruite",driedFruite:"Dried fruite",drinkFruite:"Drink fruite"}
 function ProductProvider(props) {
     const [productList, setProductList] = useState(
         [

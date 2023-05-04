@@ -5,15 +5,6 @@ $lg-textcolor: rgb(85, 85, 85);
 // #endregion
 
 .banner {
-    @media (max-width:700px){
-        font-size: 13px;
-    }
-    @media (max-width:600px){
-        font-size: 11px;
-    }
-    @media (max-width:500px){
-        font-size: 9px;
-    }
     margin-left: 25%;
     position: relative;
     background: rgb(113, 231, 75);
@@ -43,6 +34,7 @@ $lg-textcolor: rgb(85, 85, 85);
             color: $lg-textcolor;
         }
         .button {
+            cursor: pointer;
             border: none;
             font-weight: 800;
             color: white;
@@ -52,5 +44,14 @@ $lg-textcolor: rgb(85, 85, 85);
     }
     @media only screen and (max-width: 1000px) {
         margin-left: 0;
+    }
+    @media (max-width:700px){
+        font-size: 13px;
+    }
+    @media (max-width:600px){
+        font-size: 11px;
+    }
+    @media (max-width:500px){
+        font-size: 9px;
     }
 }

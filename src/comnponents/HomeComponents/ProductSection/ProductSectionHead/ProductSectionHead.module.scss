@@ -3,14 +3,6 @@
     align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
-    .title {
-        font-size: 2em;
-        font-weight: 800;
-        position: relative;
-        &::after {
-            width: 70px !important;
-        }
-    }
     ul {
         list-style: none;
         display: flex;
@@ -23,8 +15,17 @@
         li {
             &::after {
                 content: " ";
-                transition: background-color 1.4s ease;
+                top: 115%;
+                transform: translateX(-50%);
+                left: 50%;
+                content: " ";
+                width: 110%;
+                border-radius: 8px;
+                height: 4px;
+                position: absolute;        
+                transition: background-color 1s ease;
             }
+            cursor: pointer;
             position: relative;
             padding: 0px 0.6em;
             font-size: 1em;
@@ -39,15 +40,6 @@
 }
 .textLine {
     &::after {
-        top: 115%;
-        transform: translateX(-50%);
-        left: 50%;
-        content: " ";
-        width: 110%;
-        border-radius: 8px;
-        height: 4px;
         background-color: #7fad39;
-        color: #7fad39;
-        position: absolute;
     }
 }

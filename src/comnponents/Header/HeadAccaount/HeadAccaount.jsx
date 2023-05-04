@@ -4,7 +4,7 @@ import FavoriteBtn from "./FavoriteBtn/FavoriteBtn";
 
 function HeadAccaount() {
   return (
-    <div className={c.HeadAccaount}>
+    <div className={c.body}>
       <FavoriteBtn />
       <i className="fa-solid fa-bag-shopping"></i>
       <b>item:$150.000</b>

@@ -9,7 +9,7 @@ function HeadNav() {
   return (
     <div className={c.HeadNav}>
       <BurgerButton listOnOff={listOnOff} setListOnOff={setListOnOff} />
-      <List listOnOff={listOnOff}/>
+      <List />
     </div>
   );
 }

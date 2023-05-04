@@ -36,7 +36,7 @@ $lg-textcolor: rgb(85, 85, 85);
             font-size: 0.8em;
         }
     }
-    @media only screen and (max-width: 800px) {
+    @media (max-width: 800px) {
         justify-content: flex-start;
     }
 }

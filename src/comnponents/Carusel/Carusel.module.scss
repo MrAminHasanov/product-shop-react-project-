@@ -15,11 +15,11 @@ $lg-textcolor: rgb(85, 85, 85);
   width: 100%;
   overflow: hidden;
 }
-:root{
+.carousel {
   --columns: 4;
   --gap: 46px;
-  @media (max-width:1100px){
-    --columns:3;
+  @media (max-width: 1100px) {
+    --columns: 3;
   }
   @media (max-width: 800px) {
     --columns: 2;
@@ -28,24 +28,22 @@ $lg-textcolor: rgb(85, 85, 85);
     --columns: 1;
   }
   
-}
-.carousel {
   --column-width: calc((-1 * (var(--gap) * (var(--columns) - 1)) + 100%) / var(--columns));
   transform: translateX((calc(var(--position) * (var(--column-width) + var(--gap)) * -1)));
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: var(--column-width);
-  gap: var(--gap);  
+  gap: var(--gap);
   list-style-type: none;
   transition: transform 0.8s ease;
 }
 .button {
+  cursor: pointer;
   align-items: center;
-  height: 40%;
-  font-size: 1.4em;
-  border-color: rgb(216, 215, 215);
+  border-radius: 30px;
+  height: 50%;
+  font-size: 1.7em;
+  background-color: #b8e96e;
+  border: none;
   padding: 4px;
 }
-
-
-

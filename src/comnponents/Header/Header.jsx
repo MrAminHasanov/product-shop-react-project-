@@ -8,7 +8,7 @@ import HeadContact from "./HeadContact/HeadContact";
 
 function Header() {
   return (
-    <div className={c.header}>
+    <div className={c.body}>
       <HeadLogo />
       <HeadNav />
       <HeadAccaount />

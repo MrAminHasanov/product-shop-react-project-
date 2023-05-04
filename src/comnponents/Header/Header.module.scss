@@ -4,44 +4,34 @@ $bd-color: rgb(216, 215, 215);
 $lg-textcolor: rgb(85, 85, 85);
 // #endregion
 
+.body {
+    padding: 10px 0px;
 
-.header {
-    width: 100%;
-    padding-bottom:1em ;
     display: grid;
-    grid-template-columns: 23% 50% 23%;
+    grid-template-columns: 23% 55% 18%;
     grid-template-rows: 1fr 1fr;
     grid-row-gap: 1em;
     grid-column-gap: 2%;
-    grid-template-areas: 
+    grid-template-areas:
         "Logo Nav Accaount"
-        "Prodlist Search Contact"
-    ;
-    padding: 10px 0px;
+        "Prodlist Search Contact";
     @media only screen and (max-width: 1000px) {
         grid-template-columns: 45% 25.5% 25.5%;
         grid-template-rows: 54px 54px auto 54px;
-        display: grid;
         grid-template-areas:
             "Logo Nav Nav"
             "Accaount Accaount Accaount"
             "Prodlist Prodlist Prodlist"
-            "Search Search Contact"
-            ;
+            "Search Search Contact";
     }
     @media only screen and (max-width: 800px) {
-        body{
-            padding: 0px 3%;
-        }
         grid-template-columns: 45% 25.5% 25.5%;
         grid-template-rows: auto 54px auto 54px 54px;
-        display: grid;
         grid-template-areas:
             "Logo Nav Nav"
             "Accaount Accaount Accaount"
             "Prodlist Prodlist Prodlist"
             "Search Search Search"
-            "Contact Contact Contact"
-            ;
+            "Contact Contact Contact";
     }
 }

@@ -60,6 +60,7 @@ $lg-textcolor: rgb(85, 85, 85);
             padding: 0.3em;
             border-radius: 50%;
             transition: 0.5s ease all;
+            cursor: pointer;
             &:hover {
                 transform: rotateZ(360deg);
                 color: black;

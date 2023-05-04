@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { ProductContext } from "../../../../context/ProductContext/ProductContext";
-import Product from "../../../Product/Product";
+import Product from "../../../GlobalComnponets/Product/Product";
 import c from "./ProductSectionContent.module.scss";
 
 function ProductSectionContent({ selectedProductType }) {
