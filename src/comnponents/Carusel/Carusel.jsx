@@ -35,7 +35,7 @@ function Carusel() {
     <div className={c.component}>
       <button
         className={c.button}
-        onClick={() => setTimeout(() => setPosition(() => position - 1), 600)}
+        onClick={() => setTimeout(() => setPosition(() => position - 1), 200)}
       >
         {"<"}
       </button>
@@ -55,7 +55,7 @@ function Carusel() {
       </div>
       <button
         className={c.button}
-        onClick={() => setTimeout(() => setPosition(() => position + 1), 600)}
+        onClick={() => setTimeout(() => setPosition(() => position + 1), 200)}
       >
         {">"}
       </button>

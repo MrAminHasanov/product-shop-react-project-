@@ -13,78 +13,21 @@ body {
     display: flex;
     justify-content: space-evenly;
     & > div {
-        $width: 1350px;
-        $space: 200px;
-        $max-space: 50px;
         margin: 0px auto;
+        $width: 1350px;
+        $space: 150px;
+        $max-space: 50px;
         width: $width;
-        @for $i from 1 to 5 {
-            @media only screen and (max-width: calc(#{$width} - #{$space}*#{$i} - #{$max-space})) {
+        @while ($width + $max-space ) > ($space + $max-space) {
+            @media only screen and (max-width: ($width + $max-space)) {
+                @if $width < 500px{
+                    $space:50px
+                }
                 & {
-                    width: calc(#{$width} - #{$space} * #{$i});
+                    $width:$width - $space;
+                    width: $width;
                 }
             }
         }
-
-        @media only screen and (max-width: 1400px) {
-            & {
-                width: 1250px;
-            }
-        }
-        //     @media only screen and (max-width: 1300px) {
-        //         & {
-        //             width: 1150px;
-        //         }
-        //     }
-        //     @media only screen and (max-width: 1200px) {
-        //         & {
-        //             width: 1050px;
-        //         }
-        //     }
-        //     @media only screen and (max-width: 1100px) {
-        //         & {
-        //             width: 950px;
-        //         }
-        //     }
-        //     @media only screen and (max-width: 1000px) {
-        //         & {
-        //             width: 850px;
-        //         }
-        //     }
-        //     @media only screen and (max-width: 900px) {
-        //         & {
-        //             width: 750px;
-        //         }
-        //     }
-        //     @media only screen and (max-width: 800px) {
-        //         & {
-        //             width: 650px;
-        //         }
-        //     }
-        //     @media only screen and (max-width: 700px) {
-        //         & {
-        //             width: 550px;
-        //         }
-        //     }
-        //     @media only screen and (max-width: 600px) {
-        //         & {
-        //             width: 500px;
-        //         }
-        //     }
-        //     @media only screen and (max-width: 525px) {
-        //         & {
-        //             width: 425px;
-        //         }
-        //     }
-        //     @media only screen and (max-width: 450px) {
-        //         & {
-        //             width: 350px;
-        //         }
-        //     }
-        //     @media only screen and (max-width: 375px) {
-        //         & {
-        //             width: 100%;
-        //         }
-        //     }
     }
 }
