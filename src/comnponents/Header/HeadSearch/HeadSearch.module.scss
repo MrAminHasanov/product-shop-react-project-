@@ -3,7 +3,7 @@ $salat: #7fad39;
 $bd-color: rgb(216, 215, 215);
 $lg-textcolor: rgb(85, 85, 85);
 // #endregion
-.HeadSearch{
+.component{
     display: grid;
     grid-template-columns: 25% 57% 18%;
     grid-area: Search;
@@ -30,6 +30,7 @@ $lg-textcolor: rgb(85, 85, 85);
 
     button {
         &:first-child {
+            font-weight: 900;
             display: flex;
             justify-content: space-evenly;
             align-items: center;
@@ -48,6 +49,8 @@ $lg-textcolor: rgb(85, 85, 85);
         cursor: pointer;
 
         &:last-child {
+            font-size: 0.9em;
+            font-weight: 900;
             border: none;
             background-color: $salat;
             color: white;

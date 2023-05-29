@@ -3,7 +3,7 @@ import c from "./HeadSearch.module.scss"
 
 function HeadSearch() {
   return (
-    <div className={c.HeadSearch}>
+    <div className={c.component}>
       <button>
         All categories
         <i className="fa-solid fa-arrow-down"></i>

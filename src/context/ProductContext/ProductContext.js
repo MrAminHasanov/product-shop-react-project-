@@ -35,7 +35,7 @@ function ProductProvider(props) {
     )
     
         
-  const [favoriteList,favoriteListDispatch] = useReducer(favoriteReducer,[]);
+    const [favoriteList,favoriteListDispatch] = useReducer(favoriteReducer,[]);
     const [shopList, setshopList] = useState([])
     return (
         <ProductContext.Provider value={{ productList, productTypeList,shopList, setshopList,favoriteList,favoriteListDispatch }}>

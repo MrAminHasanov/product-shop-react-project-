@@ -4,11 +4,16 @@ $bd-color: rgb(216, 215, 215);
 $lg-textcolor: rgb(85, 85, 85);
 // #endregion
 
-.HeadNav {
+.component {
     width: 80%;
     grid-area: Nav;
     @media only screen and (max-width: 1000px) {
         display: flex;
         justify-content: flex-end;
+    }
+    @media only screen and (max-width: 1000px) {
+        &>ul{
+            display: none;
+        }
     }
 }

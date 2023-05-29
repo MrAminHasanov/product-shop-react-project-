@@ -5,7 +5,7 @@ import FavoriteSummary from "./FavoriteSummary/FavoriteSummary";
 function FavoriteBtn() {
   const [openBox, setOpenBox] = useState(false);
   return (
-    <div className={c.FavoriteBtn}>
+    <div className={c.component}>
       <button>
         <i
           style={openBox ? { color: "#7fad39" } : null}

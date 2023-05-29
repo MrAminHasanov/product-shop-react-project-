@@ -1,8 +1,8 @@
-import "./Title.module.scss" 
+import c from "./Title.module.scss"; 
 
 function Title({context}) {
   return (
-    <h2>{context}</h2>
+    <h2 className={c.component}>{context}</h2>
   )
 }
 

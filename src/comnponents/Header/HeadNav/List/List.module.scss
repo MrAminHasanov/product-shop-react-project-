@@ -4,7 +4,7 @@ $bd-color: rgb(216, 215, 215);
 $lg-textcolor: rgb(85, 85, 85);
 // #endregion
 
-.List {
+.component{
     user-select: none;
     display: flex;
     justify-content: space-around;
@@ -23,9 +23,7 @@ $lg-textcolor: rgb(85, 85, 85);
     }
 
     @media only screen and (max-width: 1000px) {
-        // display: none;
         flex-direction: column;
         justify-content: normal;
-
     }
 }

@@ -9,7 +9,7 @@ function FavoriteUnbox({ product }) {
   ).bg;
 
   return (
-    <div style={{ background: lineColor }} className={c.FavoriteBox}>
+    <div style={{ background: lineColor }} className={c.component}>
       <div>
         <div>
           {product.name} {product.price}$

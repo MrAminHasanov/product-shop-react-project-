@@ -4,7 +4,7 @@ import c from "./HeadLogo.module.scss";
 function HeadLogo() {
   return (
     <>
-      <div className={c.logo}>
+      <div className={c.component}>
         <img src={logo} alt="logo"></img>
       </div>
     </>

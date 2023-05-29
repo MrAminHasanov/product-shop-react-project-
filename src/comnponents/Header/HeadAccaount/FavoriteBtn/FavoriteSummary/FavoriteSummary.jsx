@@ -7,7 +7,7 @@ function FavoriteSummary() {
   const { favoriteList } = useContext(ProductContext);
 
   return (
-    <div className={c.FavoriteBox}>
+    <div className={c.component}>
       {favoriteList.map((product) => (
         <FavoriteUnbox key={product.id} product={product} />
       ))}

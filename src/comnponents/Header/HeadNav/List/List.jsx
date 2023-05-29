@@ -2,7 +2,7 @@ import c from "./List.module.scss";
 
 function List() {
   return (
-    <ul className={c.List}>
+    <ul className={c.component}>
       <li>HOME</li>
       <li>SHOP</li>
       <li>PAGES</li>

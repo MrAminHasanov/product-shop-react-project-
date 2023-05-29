@@ -5,7 +5,7 @@ import c from "./HeadProdlist.module.scss";
 function HeadProdList() {
   const [lof, setLof] = useState(true);
   return (
-    <div className={c.HeadProdList}>
+    <div className={c.component}>
       <button onClick={() => setLof(!lof)}>
         <i></i>
         All departaments
