@@ -5,15 +5,14 @@ $lg-textcolor: rgb(85, 85, 85);
 // #endregion
 
 .component {
+    position: relative;
     width: 80%;
     grid-area: Nav;
-    @media only screen and (max-width: 1000px) {
-        display: flex;
-        justify-content: flex-end;
+    @media only screen and (max-width: 1040px) {
+        width: 90%;
     }
     @media only screen and (max-width: 1000px) {
-        &>ul{
-            display: none;
-        }
+        display: flex;
+        width: 100%;
     }
 }

@@ -5,14 +5,14 @@ $lg-textcolor: rgb(85, 85, 85);
 // #endregion
 
 .component {
-    grid-area: Contact;
-    display: flex;
+    display: var(--defaultList);
     justify-content: flex-end;
 
     i {
         position: relative;
         border-radius: 50%;
-        width: 54px;
+        width: 48px;
+        height: 48px;
         color: $salat;
         background-color: rgb(243, 243, 243);
 
@@ -24,19 +24,24 @@ $lg-textcolor: rgb(85, 85, 85);
         }
     }
 
-    div {
+    div{
         height: 104%;
         padding-left: 0.5em;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-
         div:last-child {
             color: $lg-textcolor;
             font-size: 0.8em;
         }
     }
-    @media (max-width: 800px) {
-        justify-content: flex-start;
+    @media only screen and (max-width:1040px) {
+        div{
+            padding-left: 0.1em;
+        }
+    }
+    @media only screen and (max-width: 1000px) {
+        display: var(--mobileList);
+        justify-content: start;
     }
 }

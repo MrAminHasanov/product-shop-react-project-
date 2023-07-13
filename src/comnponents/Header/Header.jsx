@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 import c from "./Header.module.scss";
 import HeadLogo from "./HeadLogo/HeadLogo";
 import HeadNav from "./HeadNav/HeadNav";
@@ -5,19 +7,27 @@ import HeadAccaount from "./HeadAccaount/HeadAccaount";
 import HeadProdList from "./HeadProdList/HeadProdList";
 import HeadSearch from "./HeadSearch/HeadSearch";
 import HeadContact from "./HeadContact/HeadContact";
-import { useEffect, useState } from "react";
+import MobileMenu from "./MobileMenu/MobileMenu";
 
 function Header() {
-  const [NavState, setNavState] = useState(false);
+  const [mobileMenuState, setMobileMenuState] = useState(true);
 
   return (
     <div className={c.component}>
       <HeadLogo />
-      <HeadNav NavState={NavState} setNavState={setNavState}/>
-      <HeadAccaount />
+      <HeadNav setMobileMenuState={setMobileMenuState} screenState={"default"}/>
+      <HeadAccaount screenState={"default"}/>
       <HeadProdList />
       <HeadSearch />
-      <HeadContact />
+      <HeadContact screenState={"default"}/>
+      {
+        mobileMenuState ? (
+          <MobileMenu
+            setMobileMenuState={setMobileMenuState}
+            mobileMenuState={mobileMenuState}
+          />
+        ) : null
+      }
     </div>
   );
 }

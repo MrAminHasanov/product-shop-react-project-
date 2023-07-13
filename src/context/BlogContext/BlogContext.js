@@ -1,9 +1,9 @@
-import { createContext, useState } from "react"
+import { createContext } from "react"
 import BlogImg from "./img/Blog-img";
 
 const BlogContext = createContext();
 
-function BlogProvider({children}) {
+function BlogProvider(props) {
     const BlogContent=
       [
         {header:"Cooking tips make cooking simple", img:BlogImg[1],text:"Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat",data:" May 4,2019"},
@@ -15,7 +15,7 @@ function BlogProvider({children}) {
     ;   
     return (
     <BlogContext.Provider value={{BlogContent}}>
-      {children}
+      {props.children}
     </BlogContext.Provider>
   )
 }

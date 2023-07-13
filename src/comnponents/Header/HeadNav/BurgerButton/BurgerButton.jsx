@@ -1,8 +1,10 @@
 import c from "./BurgerButton.module.scss";
 
-function BurgerButton({NavState,setNavState}) {
+function BurgerButton({setMobileMenuState,screenState}) {
   return (
-    <div className={c.component} onClick={() => setNavState(!NavState)}>
+    <div className={c.component} onClick = {()=>setMobileMenuState(true)}
+    style={screenState === "default" ? {"--defaultList":"none" , "--mobileList":"block"} : {"--mobileList":"none" , "--defaultList":"block"}}
+    >
       <div></div>
       <div></div>
       <div></div>

@@ -1,8 +1,11 @@
 import c from "./List.module.scss";
 
-function List() {
+function List({screenState}) {
   return (
-    <ul className={c.component}>
+    <ul
+      className={c.component}
+      style={screenState === "default" ? {"--defaultList":"flex" , "--mobileList":"none"} : {"--mobileList":"flex" , "--defaultList":"none"}}
+    >
       <li>HOME</li>
       <li>SHOP</li>
       <li>PAGES</li>

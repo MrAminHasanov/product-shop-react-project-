@@ -42,7 +42,7 @@ function Carusel() {
       <div className={c.carouselWrapper}>
         <ul
           style={{
-            "--position": position,
+            "--position": position
           }}
           className={c.carousel}
         >
