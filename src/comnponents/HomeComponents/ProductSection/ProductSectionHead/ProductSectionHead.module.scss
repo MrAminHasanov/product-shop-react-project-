@@ -3,14 +3,16 @@
     align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
+    position: relative;
     ul {
         list-style: none;
         display: flex;
         justify-content: space-evenly;
         padding: 2.5em 0em;
-        @media (max-width:500px){
-            overflow-y: scroll;
-            width: 6    0%;
+        @media (max-width:570px){
+            justify-content: flex-start;
+            overflow-x: scroll;
+            width: 70%;
         }
         li {
             &::after {
@@ -25,6 +27,7 @@
                 position: absolute;        
                 transition: background-color 1s ease;
             }
+            white-space: nowrap;
             cursor: pointer;
             position: relative;
             padding: 0px 0.6em;
@@ -35,7 +38,7 @@
         }
     }
     @media (max-width: 900px) {
-        font-size: 13px;
+        font-size: 14px;
     }
 }
 .textLine {

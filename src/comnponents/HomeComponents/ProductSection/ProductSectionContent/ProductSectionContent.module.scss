@@ -1,4 +1,6 @@
 .ProductSectionContent{
+    max-height: 150vh;
+    overflow-y: scroll;
     --columns:4;
     @media (max-width:900px){
         gap: 20px;
@@ -10,7 +12,7 @@
     }
     @media (max-width:500px){
         --columns:1;
-        padding: 0px 2em;
+        padding: 0px 3em;
     }
     display: grid;
     grid-template-columns:repeat(var(--columns),1fr);

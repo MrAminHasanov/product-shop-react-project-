@@ -5,7 +5,6 @@ import c from "./ProductSectionContent.module.scss";
 
 function ProductSectionContent({ selectedProductType }) {
   const { productList } = useContext(ProductContext);
-
   return (
     <>
       <div className={c.ProductSectionContent}>

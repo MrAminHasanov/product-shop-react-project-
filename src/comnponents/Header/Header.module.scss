@@ -34,4 +34,7 @@ $lg-textcolor: rgb(85, 85, 85);
             "Prodlist Prodlist Prodlist"
             "Search Search Search";
     }
+    @media only screen and (max-width: 570px) {
+        grid-row-gap: 0.5em;
+    }
 }

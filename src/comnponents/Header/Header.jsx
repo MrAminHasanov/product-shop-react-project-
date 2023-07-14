@@ -10,7 +10,7 @@ import HeadContact from "./HeadContact/HeadContact";
 import MobileMenu from "./MobileMenu/MobileMenu";
 
 function Header() {
-  const [mobileMenuState, setMobileMenuState] = useState(true);
+  const [mobileMenuState, setMobileMenuState] = useState(false);
 
   return (
     <div className={c.component}>
