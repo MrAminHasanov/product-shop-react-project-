@@ -1,15 +1,13 @@
-import React, { useContext } from "react";
 import c from "./BlogContainer.module.scss";
-import BlogContext from "../../../context/BlogContext/BlogContext";
 
-function BlogContainer() {
-  // const BlogContent=useContext(BlogContext);
-  // console.log(BlogContent);
+function BlogContainer({blogContent}) {
   return (
-    <div>
-      <img src="" alt="" />
+    <div className={c.component}>
+      <img className={c.img} src={blogContent.img} alt=" "/>
       <div className={c.content}>
-        <div className={c.Title}></div>
+        <div className={c.data}><i className="fa-regular fa-calendar"></i>{blogContent.data}</div>
+        <div className={c.title}>{blogContent.title}</div>
+        <div className={c.text}>{blogContent.text}</div>
       </div>
     </div>
   );

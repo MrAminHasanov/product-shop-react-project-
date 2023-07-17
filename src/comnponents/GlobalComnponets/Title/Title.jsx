@@ -1,9 +1,11 @@
-import c from "./Title.module.scss"; 
+import c from "./Title.module.scss";
 
-function Title({context}) {
+function Title({ context }) {
   return (
-    <h2 className={c.component}>{context}</h2>
-  )
+    <div className={c.component}>
+      <h2 >{context}</h2>
+    </div>
+  );
 }
 
-export default Title
+export default Title;

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import c from "./Header.module.scss";
 import HeadLogo from "./HeadLogo/HeadLogo";
