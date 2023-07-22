@@ -4,6 +4,7 @@ import Home from "../pages/Home/Home";
 import ProductProvider from "../context/ProductContext/ProductContext";
 import BlogProvider from "../context/BlogContext/BlogContext";
 import "./global.scss";
+import Shop from "../pages/Shop/Shop";
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
         <ProductProvider>
           <Routes>
             <Route path="/" element={<Layout />}>
-              <Route index element={<Home />} />\
+              <Route path="/Home" index element={<Home />} />\
+              <Route path="/Shop" element={<Shop />} />\
             </Route>
           </Routes>
         </ProductProvider>

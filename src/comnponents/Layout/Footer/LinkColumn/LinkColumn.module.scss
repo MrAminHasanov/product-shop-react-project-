@@ -1,0 +1,23 @@
+.component {
+    width: 100%;
+    .title {
+        color: #1c1c1c;
+        font-weight: 700;
+        padding-bottom: 25px;
+    }
+    .linkList {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        ul {
+            width: 100%;
+            li {
+                font-size: 16px;
+                list-style: none;
+                color: #1c1c1c;
+                font-size: 14px;
+                height: 30px;
+            }
+        }
+    }
+}

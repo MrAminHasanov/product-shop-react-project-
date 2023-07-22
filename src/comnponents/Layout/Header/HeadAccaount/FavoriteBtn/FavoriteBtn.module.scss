@@ -1,0 +1,24 @@
+// #region Variebles
+$salat: #7fad39;
+$bd-color: rgb(216, 215, 215);
+$lg-textcolor: rgb(85, 85, 85);
+// #endregion
+
+.component{
+    button{
+        outline: none;
+        background: transparent;
+        border: none;
+    }
+    &>div{
+        position: relative;
+        &::before {
+            content: " ";
+            position: absolute;
+            border: 0.5em solid transparent;
+            border-bottom: $salat 0.5em solid;
+            left: 50%;
+            transform: translate(-50%, -40%);
+        }
+    }
+}

@@ -1,0 +1,49 @@
+// #region Variebles
+$salat: #7fad39;
+$bd-color: rgb(216, 215, 215);
+$lg-textcolor: rgb(85, 85, 85);
+// #endregion
+
+.component {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 16px;
+  align-items: center;
+}
+.carouselWrapper {
+  width: 100%;
+  overflow: hidden;
+}
+.carousel {
+  --columns: 4;
+  --gap: 46px;
+  @media (max-width: 1100px) {
+    --columns: 3;
+  }
+  @media (max-width: 860px) {
+    --columns: 2;
+  }
+  @media (max-width: 570px) {
+    --columns: 1;
+  }
+  
+  --column-width: calc((-1 * (var(--gap) * (var(--columns) - 1)) + 100%) / var(--columns));
+  transform: translateX((calc(var(--position) * (var(--column-width) + var(--gap)) * -1)));
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: var(--column-width);
+  gap: var(--gap);
+  list-style-type: none;
+  transition: transform 0.8s ease;
+}
+.button {
+  cursor: pointer;
+  align-items: center;
+  border-radius: 30px;
+  height: 50%;
+  font-size: 1.7em;
+  background-color: #b8e96e;
+  border: none;
+  padding: 4px;
+}

@@ -1,0 +1,81 @@
+// #region Variebles
+$salat: #7fad39;
+$bd-color: rgb(216, 215, 215);
+$lg-textcolor: rgb(85, 85, 85);
+// #endregion
+.component {
+    display: grid;
+    grid-template-columns: 25% 57% 18%;
+    grid-area: Search;
+    height: 80%;
+    margin: auto 0px;
+
+    @media (max-width: 525px) {
+        flex-direction: column;
+    }
+
+    @media only screen and (max-width: 500px) {
+        grid-template-columns: 10% auto 18%;
+    }
+
+    > * {
+        border: 1px solid $bd-color;
+        outline: none;
+    }
+
+    button{
+        cursor: pointer;
+    }
+
+    input {
+        border: 1px 0px;
+        padding-left: 23px;
+        font-size: 1em;
+
+        &::placeholder {
+            color: $bd-color;
+        }
+    }
+
+    .mobilIcon{
+        display: none;
+        font-size:1.4em;
+    }
+
+    @media only screen and (max-width: 500px) {
+        .mobilIcon{
+            display: block;
+        }
+        .title{
+            display: none;
+        }
+        .icon{
+            display: none;
+        }
+    }
+
+    .categorieBT {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: white;
+        font-size: 1em;
+        .title{
+            font-weight: 700;
+        }
+    }
+
+    .searchBT {
+        border: none;
+        background-color: $salat;
+        font-size: 0.9em;
+        .title{
+            color: white;
+            font-weight: 900;
+        }
+        .mobilIcon{
+            color: white;
+        }
+    }
+
+}
