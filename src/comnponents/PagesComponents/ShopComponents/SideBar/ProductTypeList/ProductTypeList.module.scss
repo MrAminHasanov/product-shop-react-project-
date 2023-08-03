@@ -1,0 +1,39 @@
+.component {
+    .title {
+        font-weight: 800;
+        font-size: 22px;
+    }
+    .typeList {
+        list-style: none;
+        padding-top: 2em;
+        li {
+            cursor: pointer;
+            position: relative;
+            font-size: 18px;
+            padding: 10px 0px;
+            &::after {
+                transition: 0.8s all;
+                opacity: 0;
+                content: " ";
+                display: block;
+                border-radius: 30px;
+                width: 50%;
+                height: 4px;
+                position: absolute;
+                bottom: 10%;
+                background-color: green;
+            }
+        }
+    }
+    @media only screen and (max-width:680px) {
+        .title {
+            font-size: 18px;
+        }
+        li {
+            font-size: 16px;
+        }
+    }
+}
+.active::after {
+    opacity: 1 !important;
+}

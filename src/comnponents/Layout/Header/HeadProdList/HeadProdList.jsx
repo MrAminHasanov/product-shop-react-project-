@@ -1,9 +1,10 @@
-import React from "react";
-import { useState } from "react";
 import c from "./HeadProdlist.module.scss";
 
+import { useState } from "react";
+import { useMatch } from "react-router-dom";
+
 function HeadProdList() {
-  const [lof, setLof] = useState(true);
+  const [lof, setLof] = useState(useMatch("/")!==null);
   return (
     <div className={c.component}>
       <button onClick={() => setLof(!lof)}>

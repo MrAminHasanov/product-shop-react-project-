@@ -3,11 +3,11 @@ $salat: #7fad39;
 $bd-color: rgb(216, 215, 215);
 $lg-textcolor: rgb(85, 85, 85);
 // #endregion
-.product {
+.product{
     * {
         user-select: none;
     }
-
+    white-space: nowrap;
     overflow: hidden;
     transition: 0.5s ease all;
     padding: 0.3em 3%;
@@ -70,6 +70,7 @@ $lg-textcolor: rgb(85, 85, 85);
 }
 
 .scale_animation {
+    background-color: white !important;
     animation: scale 0.6s;
 }
 

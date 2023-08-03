@@ -1,0 +1,89 @@
+$minPriceColor: #34ACBA;
+$maxPriceColor: #7fad39;
+.component {
+    width: 100%;
+    .title {
+        padding-top: 2em;
+        padding-bottom: 0.7em;
+        font-weight: 800;
+        font-size: 22px;
+        @media only screen and (max-width: 680px) {
+            font-size: 18px;
+        }
+    }
+    .minPrice {
+        .priceCounter {
+            background-color: $minPriceColor;
+            &::after {
+                border-color: transparent $minPriceColor transparent transparent;
+            }
+        }
+        input[type="range"] {
+            $left-color: $minPriceColor;
+            $right-color: rgb(180, 180, 180);
+            background-image: linear-gradient(to right, $left-color var(--minSize), $right-color var(--minSize));
+            &::-webkit-slider-thumb {
+                background-color: $minPriceColor;
+            }
+        }
+    }
+    .maxPrice {
+        .priceCounter {
+            background-color: $maxPriceColor;
+            &::after {
+                border-color: transparent $maxPriceColor transparent transparent;
+            }
+        }
+        input[type="range"] {
+            $left-color: $maxPriceColor;
+            $right-color: rgb(180, 180, 180);
+            background-image: linear-gradient(to right, $left-color var(--maxSize), $right-color var(--maxSize));
+            &::-webkit-slider-thumb {
+                background-color: $maxPriceColor;
+            }
+        }
+    }
+}
+.minPrice,
+.maxPrice {
+    input[type="range"] {
+        border-radius: 7px;
+        -webkit-appearance: none;
+        appearance: none;
+        font-size: 16px;
+        width: 60%;
+        height: 10px;
+        margin: 8px 0px;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid white;
+    }
+    div {
+        position: relative;
+        display: flex;
+        .priceCounter {
+            position: absolute;
+            color: white;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 4px 0px;
+            height: 24px;
+            width: 75px;
+            left: calc(60% + 22px);
+            top: 50%;
+            transform: translateY(-50%);
+            &::after {
+                position: absolute;
+                content: " ";
+                border: 12px solid;
+                right: 100%;
+                top: 0%;
+            }
+        }
+    }
+}

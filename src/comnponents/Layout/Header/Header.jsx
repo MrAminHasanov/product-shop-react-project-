@@ -11,7 +11,7 @@ import MobileMenu from "./MobileMenu/MobileMenu";
 
 function Header() {
   const [mobileMenuState, setMobileMenuState] = useState(false);
-
+  
   return (
     <div className={c.component}>
       <HeadLogo />
