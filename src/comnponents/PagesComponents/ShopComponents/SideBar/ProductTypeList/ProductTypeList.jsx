@@ -12,13 +12,13 @@ function ProductTypeList() {
     <div className={c.component}>
       <div className={c.title}>Product type</div>
       <ul className={c.typeList}>
-      <li onClick={()=>setSearchType("All")} className={"All"===searchType?c.active:null}> All</li>
-        {
-          productTypeList.map((i,j)=>(
-            <li key={j} onClick={()=>setSearchType(i.name)} className={i.name===searchType?c.active:null} >{i.name}</li>
-          ))
-        }
-      </ul>
+        <li><span onClick={()=>setSearchType("All")}  className={"All"===searchType?c.active:null}>All</span></li>
+          {
+            productTypeList.map((i,j)=>(
+              <li key={j}><span onClick={()=>setSearchType(i.name)} className={i.name===searchType?c.active:null}>{i.name}</span></li>
+            ))
+          }
+        </ul>
     </div>
   );
 }

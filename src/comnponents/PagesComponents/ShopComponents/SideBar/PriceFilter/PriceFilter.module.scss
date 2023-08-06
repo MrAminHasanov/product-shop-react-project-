@@ -1,15 +1,14 @@
-$minPriceColor: #34ACBA;
+$minPriceColor: #34acba;
 $maxPriceColor: #7fad39;
 .component {
     width: 100%;
     .title {
-        padding-top: 2em;
-        padding-bottom: 0.7em;
+        padding-bottom: 1em;
         font-weight: 800;
         font-size: 22px;
-        @media only screen and (max-width: 680px) {
-            font-size: 18px;
-        }
+    }
+    label{
+        font-weight: 700;
     }
     .minPrice {
         .priceCounter {
@@ -43,6 +42,7 @@ $maxPriceColor: #7fad39;
             }
         }
     }
+    padding-bottom: 4em;
 }
 .minPrice,
 .maxPrice {
@@ -84,6 +84,52 @@ $maxPriceColor: #7fad39;
                 right: 100%;
                 top: 0%;
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .title {
+        font-size: 24px;
+        padding-top: 1em !important;
+    }
+    .priceBars {
+        display: flex;
+        .minPrice,
+        .maxPrice {
+            width: 50%;
+        }
+        .priceCounter {
+            width: 60px !important;
+        }
+    }
+}
+@media only screen and (max-width: 570px) {
+    .minPrice,
+    .maxPrice {
+        input {
+            width: 80% !important;
+        }
+        .priceCounter {
+            top: 130% !important;
+            left: 40% !important;
+            transform: translateX(-50%) !important;
+            &::after {
+                top: -100% !important;
+                left: 50%;
+                transform: translate(-50%,20%);
+                border: 10px solid !important;
+            }
+        }
+    }
+    .minPrice {
+        .priceCounter::after {
+            border-color: transparent transparent $minPriceColor transparent !important;
+        }
+    }
+    .maxPrice {
+        .priceCounter::after {
+            border-color: transparent transparent $maxPriceColor transparent !important;
         }
     }
 }

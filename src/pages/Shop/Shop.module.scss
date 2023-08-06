@@ -2,22 +2,31 @@
     margin-top: 3.3em;
     justify-content: space-between;
     display: flex;
+    padding-bottom: 8em;
     .sideBar {
         width: 30%;
     }
     .productBar {
-        width: 67%; 
-    }   
-    @media only screen and (max-width:1040px){
-        .sideBar{
-            width: 243px;
-        }
-        .productBar{
-            width: calc(100% - 243px);
-            margin-left: 30px;
-        }
+        width: 70%;
     }
-    @media only screen and (max-width:680px){
+
+    @media only screen and (max-width: 860px) {
+        .sideBar {
+            width: 35%;
+        }
+        .productBar {
+            width: 65%;
+        }   
+    }
+    @media only screen and (max-width: 680px) {
+        margin-top: 0em;
         flex-direction: column;
+        .sideBar {
+            width: 100%;
+        }
+        .productBar {
+            width: 100%;
+            margin-left: 0px;
+        }
     }
 }

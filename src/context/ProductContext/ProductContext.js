@@ -10,12 +10,6 @@ export const ProductContext = createContext();
 function ProductProvider(props) {
     const [productList,setProducList] = useState(
         [
-            { name: "Onion", price: 1.5, id: 0, type: productType.vegetables, img: productImg.onion },
-            { name: "Potato", price: 2, id: 1, type: productType.vegetables, img: productImg.potato },
-            { name: "Carrot", price: 1, id: 2, type: productType.vegetables, img: productImg.carrot }, 
-            { name: "Milk", price: 3, id: 3, type: productType.dairyProduct, img: productImg.milk },
-            { name: "Cheese", price: 4, id:4, type: productType.dairyProduct, img: productImg.chees },
-            { name: "Yogurt", price: 8, id: 5, type: productType.dairyProduct, img: productImg.yogurt },
             { name: "Halal beef", price: 15, id: 6, type: productType.meat, img: productImg.beef },
             { name: "Chicken", price: 6, id: 7, type: productType.meat, img: productImg.chicken },
             { name: "Nuggets", price: 12, id: 8, type: productType.meat, img: productImg.nuggets },
@@ -27,6 +21,12 @@ function ProductProvider(props) {
             { name: "Mixed juice", price: 9, id: 14, type: productType.drinkFruite, img: productImg.mixJuice },
             { name: "Orange juice", price: 6, id: 15, type: productType.drinkFruite, img: productImg.orangeJuice },
             { name: "Summer juice", price: 4, id: 16, type: productType.drinkFruite, img: productImg.summerJuice },
+            { name: "Onion", price: 1.5, id: 0, type: productType.vegetables, img: productImg.onion },
+            { name: "Potato", price: 2, id: 1, type: productType.vegetables, img: productImg.potato },
+            { name: "Carrot", price: 1, id: 2, type: productType.vegetables, img: productImg.carrot }, 
+            { name: "Milk", price: 3, id: 3, type: productType.dairyProduct, img: productImg.milk },
+            { name: "Cheese", price: 4, id:4, type: productType.dairyProduct, img: productImg.chees },
+            { name: "Yogurt", price: 8, id: 5, type: productType.dairyProduct, img: productImg.yogurt },
         ]);
     // вынести продукттайплист    
     const productTypeList = [

@@ -8,12 +8,23 @@ import Product from "comnponents/GlobalComnponets/Product/Product";
 
 function ProductBar() {
   const { productList } = useContext(ProductContext);
-  const { searchType,productPrice}=useContext(ShopPageContext)
+  const { searchType, productPrice } = useContext(ShopPageContext);
 
   return (
     <div className={c.component}>
-      {productList.map((e,j) => (
-          <Product key={j} product={e} visability={(searchType ==="All" || searchType === e.type) && (productPrice[0] <= e.price && productPrice[1] >= e.price)?null:false } />
+      <div className={c.topBorder}></div>
+      {productList.map((e, j) => (
+        <Product
+          key={j}
+          product={e}
+          visability={
+            (searchType === "All" || searchType === e.type) &&
+            productPrice[0] <= e.price &&
+            productPrice[1] >= e.price
+              ? null
+              : false 
+          }
+        />
       ))}
     </div>
   );
