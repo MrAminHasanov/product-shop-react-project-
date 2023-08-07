@@ -10,8 +10,8 @@ function SearchBar() {
     <div className={c.component}>
       <div className={c.title}>Search</div>
       <div className={c.inputBox}>
-        <input placeholder="Search..." type="text" maxLength={30} />
-        <button>Find</button>
+        <input onChange={(e)=> setSearchProduct(e.target.value)} placeholder="Search..." type="text" maxLength={20} />
+        <button>.</button>
       </div>
     </div>
   );

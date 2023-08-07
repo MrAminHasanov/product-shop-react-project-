@@ -16,7 +16,7 @@ function Carusel() {
         .getComputedStyle(document.querySelector(`.${c.carousel}`))
         .getPropertyValue("--columns")
     );
-  }, []);
+  }, [position]);
   
   const caruselLength = productTypeList.length - caruselColumns;
 

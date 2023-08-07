@@ -9,11 +9,11 @@ $lg-textcolor: rgb(85, 85, 85);
     }
     white-space: nowrap;
     overflow: hidden;
-    transition: 0.5s ease all;
     padding: 0.3em 3%;
     position: relative;
     width: 75%;
     height: 100%;
+    animation: productInit .4s;
     img {
         object-fit: contain;
         width: 100%;
@@ -72,6 +72,14 @@ $lg-textcolor: rgb(85, 85, 85);
 .scale_animation {
     background-color: white !important;
     animation: scale 0.6s;
+}
+@keyframes productInit{
+    from{
+        scale: 0;
+    }
+    to{
+        scale: 1;
+    }
 }
 
 @keyframes scale {

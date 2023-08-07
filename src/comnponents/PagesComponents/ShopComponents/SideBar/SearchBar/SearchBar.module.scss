@@ -22,15 +22,16 @@
         padding-left: 18px;
         font-size: 16px;
         height: 30px;
-        width: 70%;
+        width: 80%;
         border-bottom-left-radius: var(--inputBorderRadius);
         border-top-left-radius: var(--inputBorderRadius);
     }
     button {
+        content: "";
         cursor: pointer;
         border-left: 2px solid rgb(180, 180, 180) !important;
         background-color: rgb(243, 243, 243);
-        width: 30%;
+        width: 20%;
         height: 30px;
         border-bottom-right-radius: var(--inputBorderRadius);
         border-top-right-radius: var(--inputBorderRadius);

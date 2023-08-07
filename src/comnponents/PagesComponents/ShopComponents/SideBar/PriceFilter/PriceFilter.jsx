@@ -15,7 +15,7 @@ function PriceFilter() {
           <label htmlFor="minPrice">Minimal</label>
           <div className={c.inputBox}> 
             <input onChange={(e) =>setProductPrice([Number(e.target.value), productPrice[1]])} style={{"--minSize": `${productPrice[0]===0?"1":productPrice[0]*100/productPrice[1]}%`}}
-            type="range" id="minPrice" min="0" max={productPrice[1]} defaultValue={0} />
+            type="range" id="minPrice" min="0" max={productPrice[1]-1} defaultValue={0} />
             <div className={c.priceCounter}>{productPrice[0]}</div>
           </div>
         </div>

@@ -3,11 +3,11 @@ import { useContext } from "react";
 import c from "./Product.module.scss";
 import { ProductContext } from "../../../context/ProductContext/ProductContext";
 
-function Product({ product, visability}) {
+function Product({ product}) {
     const { shopList, setshopList,favoriteList,favoriteListDispatch}= useContext(ProductContext)
 
     return (
-        <div className={c.product} style={visability === null ? null : { scale: 0, position: 'absolute', transition: "0s" }}>
+        <div className={c.product} >
             <img src={product.img} alt={product.name}></img>
             <div>{product.name}</div>
             <div>{product.price}$</div>

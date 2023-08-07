@@ -9,20 +9,12 @@ function ProductSectionContent({ selectedProductType }) {
   return (
     <>
       <div className={c.ProductSectionContent}>
-        {productList.map((product, i) => {
-          return (
-            <Product
-              key={i}
-              product={product}
-              visability={
-                product.type === selectedProductType ||
-                selectedProductType === "All"
-                  ? null
-                  : 1
-} 
-            />
-          );
-        })}
+        {productList.map((product, i) =>
+          product.type === selectedProductType ||
+          selectedProductType === "All" ? (
+            <Product key={i} product={product} />
+          ) : null
+        )}
       </div>
     </>
   );

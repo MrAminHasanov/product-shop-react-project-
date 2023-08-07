@@ -1,16 +1,7 @@
 .component {
     width: 100%;
-    display: grid;
-    --columns: 3;
-    justify-items: center;
-    grid-template-columns: repeat(var(--columns), 1fr);
-    max-height: 200vh;
-    overflow-y: scroll;
-    &::-webkit-scrollbar {
-        width: 0px;
-    }
 }
-.topBorder{
+.topBorder {
     transform: translateY(-100%);
     width: 100%;
     left: 0%;
@@ -19,20 +10,9 @@
     position: absolute;
     display: none;
 }
-@media only screen and (max-width:860px) {
-    .component {
-        --columns: 2;
-    }
-}
 
-@media only screen and (max-width:680px) {
-    .topBorder{
+@media only screen and (max-width: 680px) {
+    .topBorder {
         display: block;
     }
 }
-@media only screen and (max-width:570px) {
-    .component {
-        --columns: 1;
-    }
-}
-
