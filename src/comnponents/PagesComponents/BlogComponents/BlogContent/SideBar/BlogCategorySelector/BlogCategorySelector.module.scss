@@ -1,0 +1,38 @@
+.component {
+    .title {
+        font-size: 22px;
+        font-weight: 800;
+        padding-bottom: 1.8em;
+    }
+    ul {
+        list-style: none;
+        li {
+            transition: 0.2s all ease;
+            color: rgb(112, 112, 112);
+            margin-bottom: 26px;
+            &:hover {
+                scale: 1.03;
+            }
+            span {
+                transition: 0.4s all ease;
+                font-size: 18px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 680px) {
+        ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    @media only screen and (max-width: 570px) {
+        li:nth-child(2n){
+            display: flex;
+            justify-content: end;
+        }
+    }
+}
+.activeLi {
+    color: #7fad39;
+}

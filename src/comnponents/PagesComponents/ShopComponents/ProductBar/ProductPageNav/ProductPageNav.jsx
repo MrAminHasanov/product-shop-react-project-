@@ -1,4 +1,4 @@
-import { useContext,  useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import c from "./ProductPageNav.module.scss";
 import { ShopPageContext } from "context/ShopPageContext/ShopPageContext";
 
@@ -7,9 +7,9 @@ function ProductPageNav() {
     useContext(ShopPageContext);
   const array = [null, null, null, null];
   const [pageButtonPostions, setPageButtonPostions] = useState(0);
-
+  useEffect(()=> setPageButtonPostions(0),[maxProductPage])
   return (
-    <div className={c.component}>
+    <div className={c.component} id="List">
       <div className={c.ulBox}>
         {maxProductPage > 4 ? (
           <div
@@ -29,14 +29,18 @@ function ProductPageNav() {
                 i < maxProductPage && (
                   <li
                     key={i}
-                    onClick={() => setProductPage(i + pageButtonPostions)}
-                    className={
-                      productsPage === i + pageButtonPostions
-                        ? c.activeLi
-                        : null
-                    }
                   >
-                    {i + 1 + pageButtonPostions}
+                    <a
+                      href={(i + 1) === maxProductPage ? "#main" : "#List"}
+                      onClick={() => setProductPage(i + pageButtonPostions)}
+                      className={
+                        productsPage === i + pageButtonPostions
+                          ? c.activeLi
+                          : null
+                      }
+                    >
+                      {i + 1 + pageButtonPostions}
+                    </a>
                   </li>
                 )
             )}

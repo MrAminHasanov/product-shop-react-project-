@@ -6,25 +6,18 @@ import { BlogContext } from "../../../../context/BlogContext/BlogContext";
 import Title from "../../../GlobalComnponets/Title/Title";
 
 function BlogSection() {
-  const { blogsContent } = useContext(BlogContext);
-  
-  const randomBlogElement = [];
-  while (randomBlogElement.length !== 3) {
-    let randomElement = Math.floor(Math.random() * blogsContent.length);
-    if (!randomBlogElement.includes(randomElement))randomBlogElement.push(randomElement); 
-  }
+  const { randomElement } = useContext(BlogContext);
 
   return (
     <div className={c.component}>
       <Title context={"From The Blog"} />
       <div className={c.blogsBox}>
-        {randomBlogElement.map((i,key) => {
-          return (
+        {randomElement().map((blog, key) => key < 3 && (
             <div className={c.blogBox} key={key}>
-              <BlogContainer blogContent={blogsContent[i]} />
+              <BlogContainer blogContent={blog} buttonState={false} />
             </div>
-          );
-        })}
+          )
+      )}
       </div>
     </div>
   );

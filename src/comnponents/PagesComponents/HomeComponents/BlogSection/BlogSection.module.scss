@@ -14,12 +14,12 @@
     justify-content: space-evenly;
 }
 .blogBox{
-    padding: 14px;
-    border: 2px solid transparent;
+    padding: 18px;
+    border: 3px solid transparent;
     border-image: linear-gradient( rgba(255,255,255,1) 70%,rgba(163,217,82,1)100%);
     border-image-slice: 1;
     margin-bottom:3em;
-    width: 32%;
+    width: 30%;
     @media only screen and (max-width:860px) {
         width: 45%;
     }

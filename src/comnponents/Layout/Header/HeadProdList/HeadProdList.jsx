@@ -11,10 +11,10 @@ function HeadProdList() {
         <i></i>
         All departaments
         <i
-          className={"fa-solid fa-arrow-right"}
+          className={"fa-solid fa-arrow-down"}
           style={{
-            transform: lof ? "rotate(90deg)" : " ",
-            transition: "ease all .2s",
+            transform: lof ? "rotate(-180deg)" : " ",
+            transition: "ease all .5s",
           }}
         ></i>
       </button>

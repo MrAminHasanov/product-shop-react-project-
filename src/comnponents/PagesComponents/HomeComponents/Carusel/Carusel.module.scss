@@ -6,10 +6,14 @@ $lg-textcolor: rgb(85, 85, 85);
 
 .component {
   margin-top: 32px;
+  padding: 1em 0px;
   display: grid;
   grid-template-columns: auto 1fr auto;
   gap: 16px;
   align-items: center;
+  border: 2px solid;
+  $borderColor:$salat;
+  border-color: $borderColor transparent $borderColor transparent;
 }
 .carouselWrapper {
   width: 100%;
@@ -27,7 +31,7 @@ $lg-textcolor: rgb(85, 85, 85);
   @media (max-width: 570px) {
     --columns: 1;
   }
-  
+
   --column-width: calc((-1 * (var(--gap) * (var(--columns) - 1)) + 100%) / var(--columns));
   transform: translateX((calc(var(--position) * (var(--column-width) + var(--gap)) * -1)));
   display: grid;
@@ -40,10 +44,7 @@ $lg-textcolor: rgb(85, 85, 85);
 .button {
   cursor: pointer;
   align-items: center;
-  border-radius: 30px;
-  height: 50%;
   font-size: 1.7em;
-  background-color: #b8e96e;
+  background-color: white;
   border: none;
-  padding: 4px;
 }

@@ -10,7 +10,6 @@ function List({screenState}) {
     >
       <li><NavLink to={"/"} className={activePage}>HOME</NavLink></li>
       <li><NavLink to={"Shop"} className={activePage}>SHOP</NavLink></li>
-      <li><NavLink to={"Pages"} className={activePage}>PAGES</NavLink></li>
       <li><NavLink to={"Blog"} className={activePage}>BLOG</NavLink></li>
       <li><NavLink to={"Contact"} className={activePage}>CONTACT</NavLink></li>
     </ul>

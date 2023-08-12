@@ -1,0 +1,13 @@
+.component {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 26% 68%;
+    margin: 5em 0px;
+    @media only screen and (max-width: 860px) {
+        margin: 3em 0px;
+    }
+
+    @media only screen and (max-width: 680px) {
+        grid-template-columns: 100%;
+    }
+}

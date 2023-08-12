@@ -1,35 +1,44 @@
-.component{
+.component {
     padding-top: 40px;
     display: flex;
     justify-content: space-evenly;
-    .ulBox{
+    .ulBox {
         display: flex;
         align-items: center;
-        div{
+        div {
             cursor: pointer;
             font-size: 22px;
         }
-    } 
-    ul{
+    }
+    ul {
         display: flex;
         list-style: none;
-        &::-webkit-scrollbar{
+        &::-webkit-scrollbar {
             width: 0px;
         }
-        li{
-            font-weight: 700;
-            margin: 0px 10px;
-            cursor: pointer;
-            font-size: 20px;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            width: 33px;
-            height: 33px;
-            background-color: rgb(235, 235, 235);
+        li {
+            a {
+                color: black;
+                text-decoration: none;
+                font-weight: 700;
+                margin: 0px 10px;
+                cursor: pointer;
+                font-size: 20px;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                width: 33px;
+                height: 33px;
+                transition: 0.4s;
+                background-color: rgb(235, 235, 235);
+                &:hover {
+                    color: white;
+                    background-color: #7fad39;
+                }
+            }
         }
     }
-    .activeLi{
+    .activeLi {
         background-color: rgb(214, 214, 214);
     }
 }

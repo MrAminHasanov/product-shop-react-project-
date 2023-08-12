@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
 import { ProductContext } from "context/ProductContext/ProductContext";
+import { useLocation } from "react-router-dom";
 
 export const ShopPageContext = createContext();
 
@@ -16,15 +17,11 @@ function ShopPageProvider(props) {
   const [maxProductPage, setMaxProductPage] = useState([]);
   const [productCountInPage, setProductCountInPage] = useState(12);
 
-  useEffect(() => setProductPage(0), [searchType, productPrice]);
-
   useEffect(
-    () =>
-      console.log(
-        "Chicken".toLowerCase().includes(searchProduct.toLocaleLowerCase())
-      ),
-    [searchProduct]
+    () => setProductPage(0),
+    [searchType, productPrice, maxProductPage]
   );
+
   useEffect(() => {
     const filteredProducts = productList.filter(
       (product) =>
@@ -42,7 +39,13 @@ function ShopPageProvider(props) {
         (productsPage + 1) * productCountInPage
       )
     );
-  }, [searchType, productPrice, productsPage, productCountInPage,searchProduct]);
+  }, [
+    searchType,
+    productPrice,
+    productsPage,
+    productCountInPage,
+    searchProduct,
+  ]);
 
   return (
     <ShopPageContext.Provider

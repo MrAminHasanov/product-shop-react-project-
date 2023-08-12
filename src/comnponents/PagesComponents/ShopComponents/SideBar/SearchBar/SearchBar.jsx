@@ -11,7 +11,7 @@ function SearchBar() {
       <div className={c.title}>Search</div>
       <div className={c.inputBox}>
         <input onChange={(e)=> setSearchProduct(e.target.value)} placeholder="Search..." type="text" maxLength={20} />
-        <button>.</button>
+        <button></button>
       </div>
     </div>
   );

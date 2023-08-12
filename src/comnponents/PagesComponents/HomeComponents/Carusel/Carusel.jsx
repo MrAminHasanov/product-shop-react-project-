@@ -4,9 +4,7 @@ import c from "./Carusel.module.scss";
 import { ProductContext } from "../../../../context/ProductContext/ProductContext";
 import CaruselBox from "./CaruselBox/CaruselBox";
 
-
 function Carusel() {
-
   const { productTypeList } = useContext(ProductContext);
   const [position, setPosition] = useState(0);
   const [caruselColumns, setCaruselColumns] = useState(0);
@@ -17,7 +15,7 @@ function Carusel() {
         .getPropertyValue("--columns")
     );
   }, [position]);
-  
+
   const caruselLength = productTypeList.length - caruselColumns;
 
   useEffect(() => {
@@ -43,7 +41,7 @@ function Carusel() {
       <div className={c.carouselWrapper}>
         <ul
           style={{
-            "--position": position
+            "--position": position,
           }}
           className={c.carousel}
         >
