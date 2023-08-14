@@ -9,6 +9,7 @@ import Contact from "pages/Contact/Contact";
 
 import BlogProvider from "../context/BlogContext/BlogContext";
 import ProductProvider from "../context/ProductContext/ProductContext";
+import ProductPage from "pages/ProductPage/ProductPage";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
               <Route path="Shop" element={<Shop />} />\
               <Route path="Blog" element={<Blog />} />\
               <Route path="Contact" element={<Contact />} />\
+              <Route path="ProductInfo/:id" element={<ProductPage/>} />\
+              <Route path="Shop/ProductInfo/:id" element={<ProductPage/>} />\
             </Route>
           </Routes>
         </ProductProvider>

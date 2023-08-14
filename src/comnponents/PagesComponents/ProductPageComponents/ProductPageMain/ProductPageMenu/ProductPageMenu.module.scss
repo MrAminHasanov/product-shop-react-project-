@@ -1,0 +1,14 @@
+.component {
+    padding: 4em 0px;
+    display: flex;
+    justify-content: space-between;
+    .imageBox {
+        width: 40%;
+        img {
+            width: 100%;
+        }
+    }
+    .InformaitonBox{
+        width: 45%;
+    }
+}

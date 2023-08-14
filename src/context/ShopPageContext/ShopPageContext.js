@@ -1,7 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
 import { ProductContext } from "context/ProductContext/ProductContext";
-import { useLocation } from "react-router-dom";
 
 export const ShopPageContext = createContext();
 
