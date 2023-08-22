@@ -1,0 +1,30 @@
+.component{
+    i{
+        font-size: 18px;
+        border-radius: 50%;
+        padding: 7px;
+        background-color: white;
+        transition: .6s all ease;
+        &:hover{
+            color: white;
+            background-color: black;
+        }
+    }
+    .activeIcon{        
+        color: red !important;
+        background-color: white !important;
+        animation: scaleAnimation .8s;
+        transform: rotate(360deg);
+    }
+}
+@keyframes scaleAnimation {
+    0%{
+        scale: 1;
+    }
+    70%{
+        scale: 1.1;
+    }
+    100%{
+        scale: 1;
+    }
+}

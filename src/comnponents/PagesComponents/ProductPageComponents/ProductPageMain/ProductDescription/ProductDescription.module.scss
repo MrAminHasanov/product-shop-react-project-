@@ -1,0 +1,56 @@
+.component {
+    padding: 4em 0px;
+    .nav {
+        hr {
+            opacity: 0.5;
+        }
+        ul {
+            display: flex;
+            list-style: none;
+            background-color: white;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -55%);
+            padding: 5px 10px;
+            font-size: 18px;
+            width: 450px;
+            color: rgb(104, 104, 104);
+            justify-content: space-between;
+            li {
+                transition: 0.4s ease all;
+            }
+        }
+        .activeLink {
+            color: rgb(48, 48, 48);
+            font-weight: 700;
+            font-size: 20px;
+        }
+        @media only screen and (max-width: 860px) {
+            ul {
+                width: 350px;
+                font-size: 16px;
+            }
+            .activeLink{
+                font-size: 18px;
+            }
+        }
+        @media only screen and (max-width: 570px) {
+            ul {
+                width: 270px;
+                font-size: 14px;
+            }
+            .activeLink{
+                font-size: 16px;
+            }
+        }
+    }
+    .text {
+        font-size: 18px;
+        padding: 4em 0px;
+        color: rgb(143, 143, 143);
+        line-height: 1.6;
+        div:last-child {
+            margin-top: 2em;
+        }
+    }
+}

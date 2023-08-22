@@ -7,11 +7,11 @@ function ProductPageNav() {
     useContext(ShopPageContext);
   const array = [null, null, null, null];
   const [pageButtonPostions, setPageButtonPostions] = useState(0);
-  useEffect(()=> setPageButtonPostions(0),[maxProductPage])
+  useEffect(() => setPageButtonPostions(0), [maxProductPage]);
   return (
     <div className={c.component} id="List">
       <div className={c.ulBox}>
-        {maxProductPage > 4 ? (
+        {maxProductPage > 4 && pageButtonPostions > 0 && (
           <div
             onClick={() =>
               pageButtonPostions - 1 > -1
@@ -21,7 +21,7 @@ function ProductPageNav() {
           >
             {"<"}
           </div>
-        ) : null}
+        )}
         {maxProductPage > 1 && (
           <ul>
             {array.map(
@@ -29,24 +29,20 @@ function ProductPageNav() {
                 i < maxProductPage && (
                   <li
                     key={i}
+                    onClick={() => setProductPage(i + pageButtonPostions)}
+                    className={
+                      productsPage === i + pageButtonPostions
+                        ? c.activeLi
+                        : null
+                    }
                   >
-                    <a
-                      href={(i + 1) === maxProductPage ? "#main" : "#List"}
-                      onClick={() => setProductPage(i + pageButtonPostions)}
-                      className={
-                        productsPage === i + pageButtonPostions
-                          ? c.activeLi
-                          : null
-                      }
-                    >
-                      {i + 1 + pageButtonPostions}
-                    </a>
+                    {i + 1 + pageButtonPostions}
                   </li>
                 )
             )}
           </ul>
         )}
-        {maxProductPage > 4 && (
+        {maxProductPage > 4 && pageButtonPostions + 4 < maxProductPage && (
           <div
             onClick={() =>
               pageButtonPostions + 4 < maxProductPage

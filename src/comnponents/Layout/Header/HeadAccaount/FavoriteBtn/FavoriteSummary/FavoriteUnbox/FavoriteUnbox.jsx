@@ -1,9 +1,7 @@
-import { useContext } from "react";
-import { ProductContext } from "../../../../../../../context/ProductContext/ProductContext";
 import c from "./FavoriteUnbox.module.scss";
+import { productTypeList } from "context/ProductContext/ProductContext";
 
 function FavoriteUnbox({ product }) {
-  const { productTypeList } = useContext(ProductContext);
   const lineColor = productTypeList.find(
     ({ name }) => name === product.type
   ).bg;

@@ -1,11 +1,9 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
-import { ProductContext } from "context/ProductContext/ProductContext";
-
+import { productList } from "context/ProductContext/ProductContext";
 export const ShopPageContext = createContext();
 
 function ShopPageProvider(props) {
-  const { productList } = useContext(ProductContext);
   // Product filter variable
   const [searchType, setSearchType] = useState("All");
   const [productPrice, setProductPrice] = useState([0, 50]);

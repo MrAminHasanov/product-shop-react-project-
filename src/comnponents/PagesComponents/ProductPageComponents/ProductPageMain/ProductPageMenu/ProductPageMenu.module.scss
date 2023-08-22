@@ -3,12 +3,18 @@
     display: flex;
     justify-content: space-between;
     .imageBox {
-        width: 40%;
+        width: 47%;
         img {
             width: 100%;
         }
     }
     .InformaitonBox{
         width: 45%;
+    }
+    @media only screen and (max-width:860px){
+        flex-direction: column;
+        .imageBox,.InformaitonBox{
+            width: 100%;
+        }
     }
 }

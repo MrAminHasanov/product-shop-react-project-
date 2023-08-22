@@ -1,16 +1,19 @@
-import { useContext } from "react";
-import { ProductContext } from "../../../../../../context/ProductContext/ProductContext";
+import { useSelector } from "react-redux";
 
 import c from "./FavoriteSummary.module.scss";
 import FavoriteUnbox from "./FavoriteUnbox/FavoriteUnbox";
+import { productList } from "context/ProductContext/ProductContext";
 
 function FavoriteSummary() {
-  const { favoriteList } = useContext(ProductContext);
-
+  const { favoriteList } = useSelector((state) => state);
+  const favoriteProducts = productList.filter((product) =>
+    favoriteList.some((favoId) => product.id === favoId)
+  );
+  console.log(favoriteList);
   return (
     <div className={c.component}>
-      {favoriteList.map((product) => (
-        <FavoriteUnbox key={product.id} product={product} />
+      {favoriteProducts.map((product, i) => (
+        <FavoriteUnbox key={i} product={product} />
       ))}
     </div>
   );

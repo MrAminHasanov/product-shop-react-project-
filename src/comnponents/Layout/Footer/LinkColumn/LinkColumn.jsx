@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import c from "./LinkColumn.module.scss";
 
 function LinkColumn() {
@@ -6,20 +7,44 @@ function LinkColumn() {
       <div className={c.title}>Useful Links</div>
       <div className={c.linkList}>
         <ul>
-          <li>About Us</li>
-          <li>Who We Are</li>
-          <li>About Our Shop</li>
-          <li>Our Services</li>
-          <li>Secure Shopping</li>
-          <li>Projects</li>
+          <li>
+            <Link to={"/contact"}>About Us</Link>
+          </li>
+          <li>
+            <Link to={"/contact"}>Who We Are</Link>
+          </li>
+          <li>
+            <Link to={"/contact"}>About Our Shop</Link>
+          </li>
+          <li>
+            <Link to={"/contact"}>Our Services</Link>
+          </li>
+          <li>
+            <Link to={"/contact"}>Secure Shopping</Link>
+          </li>
+          <li>
+            <Link to={"/contact"}>Projects</Link>
+          </li>
         </ul>
         <ul>
-          <li>Delivery infomation</li>
-          <li>Contact</li>
-          <li>Privacy Policy</li>
-          <li>Innovation</li>
-          <li>Our Sitemap</li>
-          <li>Testimonials</li>
+          <li>
+            <Link to={"/contact"}>Delivery infomation</Link>
+          </li>
+          <li>
+            <Link to={"/contact"}>Contact</Link>
+          </li>
+          <li>
+            <Link to={"/contact"}>Privacy Policy</Link>
+          </li>
+          <li>
+            <Link to={"/contact"}>Innovation</Link>
+          </li>
+          <li>
+            <Link to={"/contact"}>Our Sitemap</Link>
+          </li>
+          <li>
+            <Link to={"/contact"}>Testimonials</Link>
+          </li>
         </ul>
       </div>
     </div>

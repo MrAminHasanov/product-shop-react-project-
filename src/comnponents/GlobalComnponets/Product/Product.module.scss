@@ -41,37 +41,19 @@ $lg-textcolor: rgb(85, 85, 85);
     }
 
     &_button {
-        bottom: 0%;
-        transition: 0.8s ease all;
-        position: absolute;
-        opacity: 0;
-        left: 50%;
-        background-color: $salat;
-        display: flex;
+        padding: 3px 0px;
         width: 60%;
+        background-color: $salat;
         border-radius: 0.7em;
+        display: flex;
         justify-content: space-evenly;
+        position: absolute;
+        transition: 0.8s ease all;
+        bottom: 0%;
+        left: 50%;
+        opacity: 0;
         transform: translateX(-50%);
-        i {
-            background-color: black;
-            color: white;
-            font-size: 120%;
-            padding: 0.3em;
-            border-radius: 50%;
-            transition: 0.5s ease all;
-            cursor: pointer;
-            &:hover {
-                transform: rotateZ(360deg);
-                color: black;
-                background-color: white;
-            }
-        }
     }
-}
-
-.scale_animation {
-    background-color: white !important;
-    animation: scale 0.6s;
 }
 @keyframes productInit {
     from {
@@ -82,16 +64,3 @@ $lg-textcolor: rgb(85, 85, 85);
     }
 }
 
-@keyframes scale {
-    0% {
-        transform: scale(1);
-    }
-
-    70% {
-        transform: scale(1.05);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}

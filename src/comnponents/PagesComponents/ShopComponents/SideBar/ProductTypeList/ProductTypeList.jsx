@@ -1,24 +1,30 @@
 import c from "./ProductTypeList.module.scss";
 import { useContext } from "react";
 
-import { ProductContext } from "../../../../../context/ProductContext/ProductContext";
 import { ShopPageContext } from "context/ShopPageContext/ShopPageContext";
+import { productTypeList } from "../../../../../context/ProductContext/ProductContext";
 
 function ProductTypeList() {
-  const { productTypeList } = useContext(ProductContext);
-  const {searchType,setSearchType} = useContext(ShopPageContext);
-
+  const { searchType, setSearchType } = useContext(ShopPageContext);
+  const productNameTypeList = [
+    "All",
+    ...productTypeList.map((type) => type.name),
+  ];
   return (
     <div className={c.component}>
       <div className={c.title}>Product type</div>
       <ul className={c.typeList}>
-        <li><span onClick={()=>setSearchType("All")}  className={"All"===searchType?c.active:null}>All</span></li>
-          {
-            productTypeList.map((i,j)=>(
-              <li key={j}><span onClick={()=>setSearchType(i.name)} className={i.name===searchType?c.active:null}>{i.name}</span></li>
-            ))
-          }
-        </ul>
+        {productNameTypeList.map((i, j) => (
+          <li key={j}>
+            <span
+              onClick={() => setSearchType(i)}
+              className={i === searchType ? c.active : null}
+            >
+              {i}
+            </span>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

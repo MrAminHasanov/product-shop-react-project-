@@ -1,11 +1,8 @@
-import { useContext } from "react";
-
 import c from "./ProductPageMenu.module.scss";
-import { ProductContext } from "context/ProductContext/ProductContext";
 import ProductPageSideMenu from "./ProductPageSideMenu/ProductPageSideMenu";
+import { productList } from "context/ProductContext/ProductContext";
 
 function ProductPageMenu({ id }) {
-  const { productList } = useContext(ProductContext);
   const product = productList[id];
 
   return (
@@ -14,7 +11,7 @@ function ProductPageMenu({ id }) {
         <img src={product.img} alt="" />
       </div>
       <div className={c.InformaitonBox}>
-        <ProductPageSideMenu name={product.name} price={product.price}/>
+        <ProductPageSideMenu name={product.name} price={product.price} id={product.id} />
       </div>
     </div>
   );

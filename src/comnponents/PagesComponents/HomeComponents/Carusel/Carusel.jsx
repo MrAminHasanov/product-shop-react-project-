@@ -1,11 +1,10 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import c from "./Carusel.module.scss";
 
-import { ProductContext } from "../../../../context/ProductContext/ProductContext";
 import CaruselBox from "./CaruselBox/CaruselBox";
+import { productTypeList } from "context/ProductContext/ProductContext";
 
 function Carusel() {
-  const { productTypeList } = useContext(ProductContext);
   const [position, setPosition] = useState(0);
   const [caruselColumns, setCaruselColumns] = useState(0);
   useEffect(() => {

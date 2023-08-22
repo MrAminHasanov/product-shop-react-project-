@@ -6,6 +6,8 @@ h2 {
     font-size: 32px;
     font-weight: 800;
     position: relative;
+    display: flex;
+    justify-content: space-evenly;    
     &::after {
         top: 115%;
         transform: translateX(-50%);

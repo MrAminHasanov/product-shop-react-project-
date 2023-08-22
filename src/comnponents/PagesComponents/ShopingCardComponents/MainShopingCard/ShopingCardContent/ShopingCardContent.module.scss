@@ -1,0 +1,48 @@
+.component {
+    padding: 7em 0px;
+    // #region NavList
+    .listNav {
+        position: relative;
+        hr {
+            color: rgb(214, 214, 214);
+            opacity: 0.4;
+        }
+        ul {
+            top: 0;
+            transform: translateY(calc(-100% + 1px));
+            left: 40px; 
+            background-color: white;
+            position: absolute;
+            display: flex;
+            li {
+                cursor: pointer;
+                list-style: none;
+                padding: 16px;
+                font-size: 20px;
+                border-top: 1px solid rgb(204, 204, 204);
+                border: 1px solid rgb(204, 204, 204);
+                background-color: rgb(243, 243, 243);
+            }
+            .activeLi {
+                background-color: white;
+                border-bottom: none;
+            }
+            @media only screen and (max-width: 870px) {
+                li {
+                    font-size: 18px;
+                }
+            }
+            @media only screen and (max-width: 570px) {
+                li {
+                    font-size: 16px;
+                    padding: 12px;
+                }
+                left: 20px;
+            }
+        }
+    }
+    //#endregion
+    .list {
+        padding: 1em 0px;
+    }
+}

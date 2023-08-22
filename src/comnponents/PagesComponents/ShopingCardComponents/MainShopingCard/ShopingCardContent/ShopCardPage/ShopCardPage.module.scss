@@ -1,0 +1,116 @@
+.component {
+    .list {
+        .listHeader {
+            justify-content: space-between;
+            display: flex;
+            font-size: 20px;
+            font-weight: 700;
+            padding: 0px 20px;
+            .actionHead {
+                width: 430px;
+                display: flex;
+                justify-content: space-between;
+                div {
+                    &:nth-child(1),
+                    &:nth-child(2),
+                    &:nth-child(4) {
+                        width: 50px;
+                    }
+                    &:nth-child(3) {
+                        width: 140px;
+                    }
+                    &:last-child {
+                        content: " ";
+                        width: 21px;
+                    }
+                }
+                @media only screen and (max-width: 1040px) {
+                    width: 400px;
+                }
+                @media only screen and (max-width: 860px) {
+                    width: 350px;
+                    div:nth-child(3) {
+                        width: 120px;
+                    }
+                }
+                @media only screen and (max-width: 680px) {
+                    width: 300px;
+                    div:nth-child(3) {
+                        width: 100px;
+                    }
+                    div:nth-child(2) {
+                        width: 40px;
+                    }
+                }
+            }
+
+            @media only screen and (max-width: 680px) {
+                font-size: 14px;
+            }
+            @media only screen and (max-width: 570px) {
+                display: none;
+            }
+        }
+    }
+    .footer {
+        padding: 3em 0px;
+        display: flex;
+        justify-content: space-between;
+        a {
+            padding: 15px 24px;
+            color: rgb(117, 117, 117);
+            background-color: rgb(245, 245, 245);
+            text-decoration: none;
+            font-weight: 600;
+            height: 50px;
+        }
+        .cardTotal {
+            background-color: rgb(245, 245, 245);
+            width: 500px;
+            padding: 16px;
+            p {
+                font-weight: 700;
+                font-size: 22px;
+            }
+            hr {
+                opacity: 0.3;
+                margin-top: 2em;
+                color: rgb(233, 233, 233);
+            }
+            ul {
+                font-weight: 700;
+                padding: 1em 0px;
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                list-style: none;
+                font-size: 18px;
+                li:last-child {
+                    color: rgb(214, 12, 12);
+                }
+            }
+            button {
+                width: 100%;
+                color: white;
+                font-size: 17px;
+                background-color: #7fad39;
+                border: none;
+                font-weight: 700;
+                padding: 12px 0px;
+            }
+            @media only screen and (max-width: 860px) {
+                width: 350px;
+            }
+        }
+
+        @media only screen and (max-width: 680px) {
+            flex-direction: column;
+            align-items: center;
+
+            .cardTotal {
+                margin-top: 2em;
+                width: 100%;
+            }
+        }
+    }
+}

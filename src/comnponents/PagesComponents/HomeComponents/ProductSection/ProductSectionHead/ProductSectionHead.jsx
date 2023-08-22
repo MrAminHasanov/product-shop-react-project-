@@ -1,11 +1,9 @@
-import { useContext } from "react";
 import c from "./ProductSectionHead.module.scss";
 
-import { ProductContext } from "../../../../../context/ProductContext/ProductContext";
 import Title from "../../../../GlobalComnponets/Title/Title";
+import { productTypeList } from "../../../../../context/ProductContext/ProductContext";
 
 function ProductSectionHead({ selectedProductType, setSelectedProductType }) {
-  const { productTypeList } = useContext(ProductContext);
   const productTypeNameList = [
     "All",
     ...productTypeList.map((product) => product.name),
@@ -21,7 +19,7 @@ function ProductSectionHead({ selectedProductType, setSelectedProductType }) {
               selectedProductType === productTypeName ? c.textLine : null
             }
             onClick={() => setSelectedProductType(productTypeName)}
-          > 
+          >
             {productTypeName}
           </li>
         ))}

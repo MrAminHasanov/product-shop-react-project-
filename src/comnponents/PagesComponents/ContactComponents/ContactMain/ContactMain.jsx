@@ -7,7 +7,7 @@ import ContactMesage from "./ContactMesage/ContactMesage";
 function ContactMain() {
   return (
     <div className={c.component}>
-      <SecondHeader title={"Contact Us"} />
+      <SecondHeader title={"Contact Us"} text={"find out more about us"} />
       <ContactInfoContainer />
       <ContactMap />
       <ContactMesage />

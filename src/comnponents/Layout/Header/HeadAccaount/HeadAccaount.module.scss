@@ -13,14 +13,20 @@ $lg-textcolor: rgb(85, 85, 85);
         content: "";
         cursor: pointer;
         z-index: 2;
+        color: black;
         position: relative;
         transition: all 0.5s;
         font-size: 1.3em;
         > &:hover {
             color: $salat;
-        }   
+        }
+           
     }
-    
+    .active{
+        i{
+            color: #2581b6;
+        }
+    }
     display: var(--defaultList);
     @media only screen and (max-width: 1000px) {
         display: var(--mobileList);
