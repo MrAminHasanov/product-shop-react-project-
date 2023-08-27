@@ -8,26 +8,33 @@ import HeadProdList from "./HeadProdList/HeadProdList";
 import HeadSearch from "./HeadSearch/HeadSearch";
 import HeadContact from "./HeadContact/HeadContact";
 import MobileMenu from "./MobileMenu/MobileMenu";
+import HeadSearchProvider from "context/HeadSearchContext/HeadSearchContext";
 
 function Header() {
   const [mobileMenuState, setMobileMenuState] = useState(false);
-  
+
   return (
     <div className={c.component}>
       <HeadLogo />
-      <HeadNav setMobileMenuState={setMobileMenuState} screenState={"default"}/>
-      <HeadAccaount screenState={"default"}/>
+      <HeadNav
+        setMobileMenuState={setMobileMenuState}
+        screenState={"default"}
+      />
+
+      <HeadAccaount screenState={"default"} />
+
       <HeadProdList />
-      <HeadSearch />
-      <HeadContact screenState={"default"}/>
-      {
-        mobileMenuState ? (
-          <MobileMenu
-            setMobileMenuState={setMobileMenuState}
-            mobileMenuState={mobileMenuState}
-          />
-        ) : null
-      }
+      <HeadSearchProvider>
+        <HeadSearch />
+      </HeadSearchProvider>
+
+      <HeadContact screenState={"default"} />
+      {mobileMenuState ? (
+        <MobileMenu
+          setMobileMenuState={setMobileMenuState}
+          mobileMenuState={mobileMenuState}
+        />
+      ) : null}
     </div>
   );
 }

@@ -5,7 +5,7 @@ import ShopCardPage from "./ShopCardPage/ShopCardPage";
 import FavoritePage from "./FavoritePage/FavoritePage";
 
 function ShopingCardContent() {
-  const [selectedList, setSelectedList] = useState("favoList");
+  const [selectedList, setSelectedList] = useState("shopList");
   return (
     <div className={c.component}>
       <div className={c.listNav}>

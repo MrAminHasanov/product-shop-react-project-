@@ -1,0 +1,7 @@
+.component {
+    position: absolute;
+    font-size: 22px;
+    cursor: pointer;
+    top: var(--backBtnTop);
+    z-index: 2;
+}

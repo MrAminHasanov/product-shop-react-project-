@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import c from "./FavoriteUnbox.module.scss";
 import { productTypeList } from "context/ProductContext/ProductContext";
 
@@ -9,9 +10,9 @@ function FavoriteUnbox({ product }) {
   return (
     <div style={{ background: lineColor }} className={c.component}>
       <div>
-        <div>
+        <Link to={`/shop/product-info/${product.id}`} className={c.productName}>
           {product.name} {product.price}$
-        </div>
+        </Link>
         <img src={product.img} alt={product.name} />
       </div>
     </div>

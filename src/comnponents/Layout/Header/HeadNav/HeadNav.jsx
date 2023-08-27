@@ -6,7 +6,7 @@ function HeadNav({setMobileMenuState,screenState}) {
   return (
     <div className={c.component}>
       <BurgerButton setMobileMenuState={setMobileMenuState} screenState={screenState}/>
-      <List screenState={screenState}/>
+      <List setMobileMenuState={setMobileMenuState} screenState={screenState}/>
     </div>
   );
 }

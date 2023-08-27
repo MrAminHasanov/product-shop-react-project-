@@ -1,4 +1,4 @@
-.component{
+.component {
     position: relative;
     animation: BlogInit var(--page);
     width: 100%;
@@ -7,7 +7,12 @@
     justify-content: space-between;
     display: flex;
     flex-direction: column;
-    button{
+    .linkButton {
+        display: flex; 
+        align-items: center;
+        justify-content: space-evenly;
+        font-weight: 700;
+        font-size: 14px;
         margin-top: 25px;
         height: 45px;
         width: 140px;
@@ -15,41 +20,47 @@
         color: #636363;
         border: 1px solid rgb(189, 189, 189);
         border-radius: 40px;
-        transition: .8s ease all;
-        &:hover{
+        transition: 0.8s ease all;
+        cursor: pointer;
+        text-decoration: none;
+        &:hover {
             background-color: #7fad39;
             color: white;
             border-color: transparent;
         }
     }
+    .img {
+        width: 100%;
+        object-fit: cover;
+        max-height: 260px;
+        margin: auto 0px;
+    }
 }
-.img{
-    width: 100%;
-    object-fit: cover;
-    max-height: 260px;
-}
-.content{
+.content {
     width: 100%;
     margin-top: 1.5em;
-    .data{
+    .data {
         color: #b2b2b2;
     }
-    .title{
-        cursor:pointer; 
+    .title {
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
         font-size: 1.3em;
-        padding:0.7em 0px;
+        display: block;
+        padding: 0.7em 0px;
         font-weight: 700;
     }
-    .text{
+    .text {
         font-size: 0.9em;
         color: #6f6f6f;
     }
 }
 @keyframes BlogInit {
-    from{
+    from {
         right: 100%;
     }
-    to{
+    to {
         right: 0%;
     }
 }

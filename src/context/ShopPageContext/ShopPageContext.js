@@ -1,13 +1,19 @@
 import { createContext, useEffect, useState } from "react";
 
 import { productList } from "context/ProductContext/ProductContext";
+import { useLocation } from "react-router-dom";
 export const ShopPageContext = createContext();
 
 function ShopPageProvider(props) {
+  const importedState = useLocation().state;
+  const startState = {
+    searchType: "All",
+    searchProduct: "",
+  };
   // Product filter variable
-  const [searchType, setSearchType] = useState("All");
+  const [searchType, setSearchType] = useState(startState.searchType);
+  const [searchProduct, setSearchProduct] = useState(startState.searchProduct);
   const [productPrice, setProductPrice] = useState([0, 50]);
-  const [searchProduct, setSearchProduct] = useState("");
   const [sortedProductList, setSortedProductList] = useState([]);
   // Product page variable
   const [productsPage, setProductPage] = useState(0);

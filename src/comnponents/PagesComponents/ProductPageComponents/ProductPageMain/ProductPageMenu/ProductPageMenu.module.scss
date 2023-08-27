@@ -1,4 +1,6 @@
 .component {
+    --backBtnTop: calc(4em + 35px);
+    position: relative;
     padding: 4em 0px;
     display: flex;
     justify-content: space-between;
@@ -8,13 +10,18 @@
             width: 100%;
         }
     }
-    .InformaitonBox{
+    .InformaitonBox {
         width: 45%;
     }
-    @media only screen and (max-width:860px){
+    @media only screen and (max-width: 860px) {
         flex-direction: column;
-        .imageBox,.InformaitonBox{
+        .imageBox,
+        .InformaitonBox {
             width: 100%;
         }
+    }
+    @media only screen and (max-width: 570px) {
+        
+    --backBtnTop: calc(4em + 15px);
     }
 }

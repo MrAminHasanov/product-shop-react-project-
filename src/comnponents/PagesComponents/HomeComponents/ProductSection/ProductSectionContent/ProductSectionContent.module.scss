@@ -16,8 +16,8 @@
         gap: 60px;
         --columns: 2;
     }
-    @media (max-width: 500px) {
+    @media (max-width: 570px) {
         --columns: 1;
-        padding: 0px 3em;
+        padding: 0px 1em;
     }
 }

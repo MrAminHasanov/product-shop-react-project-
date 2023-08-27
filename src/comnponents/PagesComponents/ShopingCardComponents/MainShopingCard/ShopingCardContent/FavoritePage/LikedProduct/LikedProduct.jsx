@@ -11,7 +11,7 @@ function LikedProduct({ product }) {
       <div className={c.actionBox}>
         <ShopListTogleBtn id={product.id} />
         <i
-          class={`fa-solid fa-xmark ${c.delete}`}
+          className={`fa-solid fa-xmark ${c.delete}`}
           onClick={() => toggleToFavorites(product.id)}
         ></i>
       </div>

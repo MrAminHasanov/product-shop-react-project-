@@ -8,42 +8,66 @@ function LinkColumn() {
       <div className={c.linkList}>
         <ul>
           <li>
-            <Link to={"/contact"}>About Us</Link>
+            <Link to={"/contact"} onClick={() => window.scrollTo(0, 0)}>
+              About Us
+            </Link>
           </li>
           <li>
-            <Link to={"/contact"}>Who We Are</Link>
+            <Link to={"/contact"} onClick={() => window.scrollTo(0, 0)}>
+              Who We Are
+            </Link>
           </li>
           <li>
-            <Link to={"/contact"}>About Our Shop</Link>
+            <Link to={"/contact"} onClick={() => window.scrollTo(0, 0)}>
+              About Our Shop
+            </Link>
           </li>
           <li>
-            <Link to={"/contact"}>Our Services</Link>
+            <Link to={"/contact"} onClick={() => window.scrollTo(0, 0)}>
+              Our Services
+            </Link>
           </li>
           <li>
-            <Link to={"/contact"}>Secure Shopping</Link>
+            <Link to={"/contact"} onClick={() => window.scrollTo(0, 0)}>
+              Secure Shopping
+            </Link>
           </li>
           <li>
-            <Link to={"/contact"}>Projects</Link>
+            <Link to={"/contact"} onClick={() => window.scrollTo(0, 0)}>
+              Projects
+            </Link>
           </li>
         </ul>
         <ul>
           <li>
-            <Link to={"/contact"}>Delivery infomation</Link>
+            <Link to={"/contact"} onClick={() => window.scrollTo(0, 0)}>
+              Delivery infomation
+            </Link>
           </li>
           <li>
-            <Link to={"/contact"}>Contact</Link>
+            <Link to={"/contact"} onClick={() => window.scrollTo(0, 0)}>
+              Contact
+            </Link>
           </li>
           <li>
-            <Link to={"/contact"}>Privacy Policy</Link>
+            <Link to={"/contact"} onClick={() => window.scrollTo(0, 0)}>
+              Privacy Policy
+            </Link>
           </li>
           <li>
-            <Link to={"/contact"}>Innovation</Link>
+            <Link to={"/contact"} onClick={() => window.scrollTo(0, 0)}>
+              Innovation
+            </Link>
           </li>
           <li>
-            <Link to={"/contact"}>Our Sitemap</Link>
+            <Link to={"/contact"} onClick={() => window.scrollTo(0, 0)}>
+              Our Sitemap
+            </Link>
           </li>
           <li>
-            <Link to={"/contact"}>Testimonials</Link>
+            <Link to={"/contact"} onClick={() => window.scrollTo(0, 0)}>
+              Testimonials
+            </Link>
           </li>
         </ul>
       </div>

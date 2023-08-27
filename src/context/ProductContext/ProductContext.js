@@ -33,7 +33,7 @@ export const productList = [
     img: productImg.nuggets,
   },
   {
-    name: "Nugget legs",
+    name: "Chicken legs",
     price: 16,
     id: 3,
     type: productType.meat,
@@ -160,9 +160,7 @@ export const productTypeList = [
     bg: "rgb(220, 243, 240)",
   },
 ];
-const hi={
 
-}
 export function randomProducts(id) {
   const productType = productList.find((product) => product.id === id).type;
 

@@ -9,7 +9,7 @@ function FavoriteSummary() {
   const favoriteProducts = productList.filter((product) =>
     favoriteList.some((favoId) => product.id === favoId)
   );
-  console.log(favoriteList);
+
   return (
     <div className={c.component}>
       {favoriteProducts.map((product, i) => (

@@ -6,7 +6,7 @@
     margin-top: 0.8em;
     padding: 0.2em 0.2em;
 
-    &>div {
+    & > div {
         background-color: white;
         border-radius: 6px;
         justify-content: space-between;
@@ -15,12 +15,14 @@
         display: flex;
         border: 1px solid black;
         padding: 0.3em 1em;
-    
-        div:first-child {
+
+        .productName {
             font-size: 1em;
             margin: auto 0px;
+            color: black;
+            cursor: pointer;
+            text-decoration: none;
         }
-
         .line {
             background-color: rgb(201, 201, 201);
             width: 2px;

@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import c from "./List.module.scss";
 
-function List({ screenState }) {
+function List({ screenState, setMobileMenuState }) {
   const activePage = ({ isActive }) => (isActive ? c.active : null);
   return (
     <ul
@@ -13,22 +13,38 @@ function List({ screenState }) {
       }
     >
       <li>
-        <NavLink to={"/"} className={activePage}>
+        <NavLink
+          to={"/"}
+          className={activePage}
+          onClick={() => setMobileMenuState(false)}
+        >
           HOME
         </NavLink>
       </li>
       <li>
-        <NavLink to={"shop"} className={activePage}>
+        <NavLink
+          to={"shop"}
+          className={activePage}
+          onClick={() => setMobileMenuState(false)}
+        >
           SHOP
         </NavLink>
       </li>
       <li>
-        <NavLink to={"blog"} className={activePage}>
+        <NavLink
+          to={"blog"}
+          className={activePage}
+          onClick={() => setMobileMenuState(false)}
+        >
           BLOG
         </NavLink>
       </li>
       <li>
-        <NavLink to={"contact"} className={activePage}>
+        <NavLink
+          to={"contact"}
+          className={activePage}
+          onClick={() => setMobileMenuState(false)}
+        >
           CONTACT
         </NavLink>
       </li>

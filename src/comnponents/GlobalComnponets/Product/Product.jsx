@@ -9,7 +9,12 @@ function Product({ product }) {
     <div className={c.product}>
       <img src={product.img} alt={product.name}></img>
       <div className={c.productName}>
-        <Link to={`/shop/product-info/${product.id}`}>{product.name}</Link>
+        <Link
+          to={`/shop/product-info/${product.id}`}
+          onClick={() => window.scrollTo(0, 0)}
+        >
+          {product.name}
+        </Link>
       </div>
       <div className={c.produtcPrice}>{product.price}$</div>
 

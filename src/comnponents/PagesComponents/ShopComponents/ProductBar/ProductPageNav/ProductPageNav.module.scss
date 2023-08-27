@@ -17,22 +17,24 @@
             width: 0px;
         }
         li {
-            color: black;
-            text-decoration: none;
-            font-weight: 700;
-            margin: 0px 10px;
-            cursor: pointer;
-            font-size: 20px;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            width: 33px;
-            height: 33px;
-            transition: 0.4s;
-            background-color: rgb(235, 235, 235);
-            &:hover {
-                color: white;
-                background-color: #7fad39;
+            a {
+                color: black;
+                text-decoration: none;
+                font-weight: 700;
+                margin: 0px 10px;
+                cursor: pointer;
+                font-size: 20px;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                width: 33px;
+                height: 33px;
+                transition: 0.4s;
+                background-color: rgb(235, 235, 235);
+                &:hover {
+                    color: white;
+                    background-color: #7fad39;
+                }
             }
         }
     }

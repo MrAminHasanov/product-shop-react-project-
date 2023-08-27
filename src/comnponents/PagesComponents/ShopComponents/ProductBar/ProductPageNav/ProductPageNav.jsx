@@ -27,16 +27,18 @@ function ProductPageNav() {
             {array.map(
               (e, i) =>
                 i < maxProductPage && (
-                  <li
-                    key={i}
-                    onClick={() => setProductPage(i + pageButtonPostions)}
-                    className={
-                      productsPage === i + pageButtonPostions
-                        ? c.activeLi
-                        : null
-                    }
-                  >
-                    {i + 1 + pageButtonPostions}
+                  <li key={i}>
+                    <a
+                      href="#main"
+                      onClick={() => setProductPage(i + pageButtonPostions)}
+                      className={
+                        productsPage === i + pageButtonPostions
+                          ? c.activeLi
+                          : null
+                      }
+                    >
+                      {i + 1 + pageButtonPostions}
+                    </a>
                   </li>
                 )
             )}

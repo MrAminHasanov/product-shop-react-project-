@@ -1,0 +1,16 @@
+.component {
+    img {
+        width: 70px;
+    }
+    padding: 8px 12px;
+    display: flex;  
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    .productName{
+        color: black;
+        cursor: pointer;
+        text-decoration: none;
+    }
+}

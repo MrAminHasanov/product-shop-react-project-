@@ -12,7 +12,23 @@
     border: none;
     color: rgb(138, 138, 138);
     transition: 0.5s ease all;
+    &:hover {
+        background-color: rgb(214, 214, 214);
+    }
 }
 .activeFavorite {
     color: red;
+    animation: scale .6s ease;
+}
+
+@keyframes scale {
+    0% {
+        scale: 1;
+    }
+    40% {
+        scale: 1.1;
+    }
+    100% {
+        scale: 1;
+    }
 }
