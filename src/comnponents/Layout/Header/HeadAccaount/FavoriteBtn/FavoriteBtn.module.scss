@@ -10,7 +10,7 @@ $lg-textcolor: rgb(85, 85, 85);
         background: transparent;
         border: none;
     }
-    &>div{
+    .favoriteBox{
         position: relative;
         &::before {
             content: " ";
@@ -20,5 +20,13 @@ $lg-textcolor: rgb(85, 85, 85);
             left: 50%;
             transform: translate(-50%, -40%);
         }
+    }
+    .backgrounde{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
     }
 }

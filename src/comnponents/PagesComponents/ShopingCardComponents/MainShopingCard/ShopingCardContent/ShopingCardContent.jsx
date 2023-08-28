@@ -1,11 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import c from "./ShopingCardContent.module.scss";
 import ShopCardPage from "./ShopCardPage/ShopCardPage";
 import FavoritePage from "./FavoritePage/FavoritePage";
+import { useLocation } from "react-router-dom";
 
 function ShopingCardContent() {
-  const [selectedList, setSelectedList] = useState("shopList");
+  const page = useLocation().state;
+  const [selectedList, setSelectedList] = useState(
+    page === null ? "shopList" : page
+  );
   return (
     <div className={c.component}>
       <div className={c.listNav}>

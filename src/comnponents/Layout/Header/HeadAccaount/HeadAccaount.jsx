@@ -13,7 +13,7 @@ function HeadAccaount({ screenState }) {
           : { "--mobileList": "grid", "--defaultList": "none" }
       }
     >
-      <FavoriteBtn />
+      <FavoriteBtn screenState={screenState} />
       <NavLink to={"/shoping-card"} className={activePage}>
         <i className={`fa-solid fa-bag-shopping `}></i>
       </NavLink>

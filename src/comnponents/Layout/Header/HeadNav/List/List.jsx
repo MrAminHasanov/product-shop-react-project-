@@ -13,38 +13,22 @@ function List({ screenState, setMobileMenuState }) {
       }
     >
       <li>
-        <NavLink
-          to={"/"}
-          className={activePage}
-          onClick={() => setMobileMenuState(false)}
-        >
+        <NavLink to={"/"} className={activePage}>
           HOME
         </NavLink>
       </li>
       <li>
-        <NavLink
-          to={"shop"}
-          className={activePage}
-          onClick={() => setMobileMenuState(false)}
-        >
+        <NavLink to={"shop"} className={activePage}>
           SHOP
         </NavLink>
       </li>
       <li>
-        <NavLink
-          to={"blog"}
-          className={activePage}
-          onClick={() => setMobileMenuState(false)}
-        >
+        <NavLink to={"blog"} className={activePage}>
           BLOG
         </NavLink>
       </li>
       <li>
-        <NavLink
-          to={"contact"}
-          className={activePage}
-          onClick={() => setMobileMenuState(false)}
-        >
+        <NavLink to={"contact"} className={activePage}>
           CONTACT
         </NavLink>
       </li>

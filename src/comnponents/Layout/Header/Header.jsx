@@ -9,9 +9,11 @@ import HeadSearch from "./HeadSearch/HeadSearch";
 import HeadContact from "./HeadContact/HeadContact";
 import MobileMenu from "./MobileMenu/MobileMenu";
 import HeadSearchProvider from "context/HeadSearchContext/HeadSearchContext";
+import { usePathEffect } from "hooks/usePathEffect";
 
 function Header() {
   const [mobileMenuState, setMobileMenuState] = useState(false);
+  usePathEffect(() => setMobileMenuState(false));
 
   return (
     <div className={c.component}>

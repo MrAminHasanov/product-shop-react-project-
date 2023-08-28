@@ -3,6 +3,7 @@ import c from "./HeadSearchCategoryBtn.module.scss";
 
 import { productTypeList } from "context/ProductContext/ProductContext";
 import { HeadSearchContext } from "context/HeadSearchContext/HeadSearchContext";
+import { usePathEffect } from "hooks/usePathEffect";
 
 function HeadSearchCategoryBtn() {
   const { productCategory, setProductCategory, inputExist } =
@@ -14,6 +15,7 @@ function HeadSearchCategoryBtn() {
     () => setCategoryListOnOff(inputExist ? false : categoryListOnOff),
     [inputExist]
   );
+  usePathEffect(() => setCategoryListOnOff(false));
   return (
     <button
       className={c.categorieBT}

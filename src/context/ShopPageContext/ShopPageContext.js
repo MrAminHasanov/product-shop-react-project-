@@ -6,13 +6,9 @@ export const ShopPageContext = createContext();
 
 function ShopPageProvider(props) {
   const importedState = useLocation().state;
-  const startState = {
-    searchType: "All",
-    searchProduct: "",
-  };
   // Product filter variable
-  const [searchType, setSearchType] = useState(startState.searchType);
-  const [searchProduct, setSearchProduct] = useState(startState.searchProduct);
+  const [searchType, setSearchType] = useState("All");
+  const [searchProduct, setSearchProduct] = useState("");
   const [productPrice, setProductPrice] = useState([0, 50]);
   const [sortedProductList, setSortedProductList] = useState([]);
   // Product page variable
@@ -20,6 +16,12 @@ function ShopPageProvider(props) {
   const [maxProductPage, setMaxProductPage] = useState([]);
   const [productCountInPage, setProductCountInPage] = useState(12);
 
+  useEffect(() => {
+    if (importedState !== null) {
+      setSearchType(importedState.category);
+      setSearchProduct(importedState.search);
+    }
+  }, [importedState]);
   useEffect(
     () => setProductPage(0),
     [searchType, productPrice, maxProductPage]
