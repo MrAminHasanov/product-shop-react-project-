@@ -15,10 +15,8 @@ function HeadSearchButton() {
 
   return (
     <div className={c.component}>
-      <button className={c.searchBT}>
-        <div onClick={() => goShop()} className={c.title}>
-          SEARCH
-        </div>
+      <button onClick={() => goShop()} className={c.searchBT}>
+        <div className={c.title}>SEARCH</div>
         <i className={`fa-solid fa-magnifying-glass ${c.mobilIcon}`}></i>
       </button>
     </div>

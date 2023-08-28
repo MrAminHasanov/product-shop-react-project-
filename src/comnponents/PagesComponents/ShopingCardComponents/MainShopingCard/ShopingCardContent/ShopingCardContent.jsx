@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import c from "./ShopingCardContent.module.scss";
 import ShopCardPage from "./ShopCardPage/ShopCardPage";

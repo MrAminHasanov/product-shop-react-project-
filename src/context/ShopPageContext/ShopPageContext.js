@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 export const ShopPageContext = createContext();
 
 function ShopPageProvider(props) {
-  const importedState = useLocation().state;
+  const { state: importedState } = useLocation();
   // Product filter variable
   const [searchType, setSearchType] = useState("All");
   const [searchProduct, setSearchProduct] = useState("");
@@ -22,19 +22,23 @@ function ShopPageProvider(props) {
       setSearchProduct(importedState.search);
     }
   }, [importedState]);
-  useEffect(
-    () => setProductPage(0),
-    [searchType, productPrice, maxProductPage]
-  );
 
   useEffect(() => {
-    const filteredProducts = productList.filter(
-      (product) =>
-        (searchType === "All" || searchType === product.type) &&
-        productPrice[0] <= product.price &&
-        productPrice[1] >= product.price &&
+    setProductPage(0);
+  }, [searchType, productPrice, maxProductPage]);
+
+  useEffect(() => {
+    const filteredProducts = productList.filter((product) => {
+      const isCorrectType = searchType === "All" || searchType === product.type;
+      const isCorrectPrice =
+        productPrice[0] <= product.price && productPrice[1] >= product.price;
+
+      return (
+        isCorrectPrice &&
+        isCorrectType &&
         product.name.toLowerCase().includes(searchProduct.toLocaleLowerCase())
-    );
+      );
+    });
 
     setMaxProductPage(Math.ceil(filteredProducts.length / productCountInPage));
 

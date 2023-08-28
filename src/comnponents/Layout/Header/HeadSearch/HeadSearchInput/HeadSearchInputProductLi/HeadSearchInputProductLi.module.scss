@@ -12,5 +12,9 @@
         color: black;
         cursor: pointer;
         text-decoration: none;
+        transition: .4s color;
+        &:hover {
+            color:rgb(252, 60, 60);
+        }
     }
 }
