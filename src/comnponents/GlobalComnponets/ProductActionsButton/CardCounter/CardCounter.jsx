@@ -1,10 +1,11 @@
 import { useSelector } from "react-redux";
-import c from "./CardCounter.module.scss";
 import { useActions } from "hooks/useActions";
 import { useEffect, useState } from "react";
+import c from "./CardCounter.module.scss";
+import { selectShopList } from "Store/UseStateSelector";
 
-function CardCounter({id}) {
-  const { shopList } = useSelector((state) => state);
+function CardCounter({ id }) {
+  const shopList = useSelector(selectShopList);
 
   const { incrimentCount, dincrimentCount } = useActions();
 

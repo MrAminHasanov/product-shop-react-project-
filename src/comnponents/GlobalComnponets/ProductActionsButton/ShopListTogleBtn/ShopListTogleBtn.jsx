@@ -1,10 +1,12 @@
 import { useSelector } from "react-redux";
-import c from "./ShopListTogleBtn.module.scss";
 import { useActions } from "hooks/useActions";
 import { useEffect, useState } from "react";
 
+import c from "./ShopListTogleBtn.module.scss";
+import { selectShopList } from "Store/UseStateSelector";
+
 function ShopListTogleBtn({ id }) {
-  const { shopList } = useSelector((state) => state);
+  const shopList = useSelector(selectShopList);
   const { toggleToShopList } = useActions();
 
   const [shopExist, setShopExist] = useState("");

@@ -1,13 +1,10 @@
 import c from "./ProductContent.module.scss";
-import { useContext, useEffect} from "react";
-import { useSelector } from "react-redux";
+import { useContext, useEffect } from "react";
 
 import { ShopPageContext } from "context/ShopPageContext/ShopPageContext";
 import Product from "comnponents/GlobalComnponets/Product/Product";
 
 function ProductContent() {
-  const { favoriteList, shopList } = useSelector((state)=>state);
-
   const { sortedProductList, setProductCountInPage } =
     useContext(ShopPageContext);
 
@@ -20,13 +17,13 @@ function ProductContent() {
         2000
       );
     });
-    return ()=> clearInterval(ShopInterval);
+    return () => clearInterval(ShopInterval);
   }, []);
-  
+
   return (
     <div className={c.component} id="main">
       {sortedProductList.map((e, j) => (
-        <Product key={j} product={e} favoriteList={favoriteList} shopList={shopList}/>
+        <Product key={j} product={e} />
       ))}
     </div>
   );

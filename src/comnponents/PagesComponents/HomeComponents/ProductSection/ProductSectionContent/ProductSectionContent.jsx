@@ -5,7 +5,6 @@ import Product from "../../../../GlobalComnponets/Product/Product";
 import { productList } from "../../../../../context/ProductContext/ProductContext";
 
 function ProductSectionContent({ selectedProductType }) {
-  const { favoriteList, shopList } = useSelector((state) => state);
 
   return (
     <>
@@ -16,8 +15,6 @@ function ProductSectionContent({ selectedProductType }) {
             <Product
               key={i}
               product={product}
-              favoriteList={favoriteList}
-              shopList={shopList}
             />
           ) : null
         )}

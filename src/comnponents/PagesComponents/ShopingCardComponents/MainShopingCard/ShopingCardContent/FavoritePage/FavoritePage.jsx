@@ -1,10 +1,12 @@
 import { useSelector } from "react-redux";
+
 import c from "./FavoritePage.module.scss";
 import { productList } from "context/ProductContext/ProductContext";
+import { selectFavoriteList } from "Store/UseStateSelector";
 import LikedProduct from "./LikedProduct/LikedProduct";
 
 function FavoritePage() {
-  const favoriteList = useSelector((state) => state.favoriteList);
+  const favoriteList = useSelector(selectFavoriteList);
   return (
     <div>
       <div className={c.component}>

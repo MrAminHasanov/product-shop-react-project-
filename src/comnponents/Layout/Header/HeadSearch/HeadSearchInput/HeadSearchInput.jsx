@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 
 import c from "./HeadSearchInput.module.scss";
 import { HeadSearchContext } from "context/HeadSearchContext/HeadSearchContext";
@@ -12,9 +12,17 @@ function HeadSearchInput() {
     filteredSearchProduct,
     inputExist,
     setInputExist,
+    goShop,
   } = useContext(HeadSearchContext);
 
   usePathEffect(() => setSearchProduct(""));
+
+  const enterEvent = (e)=>{
+    if(e.key=== "Enter"){
+      goShop()
+      setInputExist(false)
+    }
+  }
 
   return (
     <div className={c.component}>
@@ -24,6 +32,7 @@ function HeadSearchInput() {
         onFocus={() => setInputExist(true)}
         onBlur={() => setTimeout(() => setInputExist(false), 200)}
         onChange={(e) => setSearchProduct(e.target.value)}
+        onKeyDown={(e) => enterEvent(e)}
         placeholder="What do you need?"
       ></input>
       <ul style={!inputExist ? { border: "none" } : null}>

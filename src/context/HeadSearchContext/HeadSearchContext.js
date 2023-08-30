@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import { productList } from "context/ProductContext/ProductContext";
+import { useNavigate } from "react-router-dom";
 
 export const HeadSearchContext = createContext();
 
@@ -8,6 +9,13 @@ function HeadSearchProvider(props) {
   const [productCategory, setProductCategory] = useState("All");
   const [filteredSearchProduct, setFilteredSearchProduct] = useState([]);
   const [inputExist, setInputExist] = useState(false);
+
+  const navigator = useNavigate();
+
+  const goShop = () =>
+    navigator("/shop", {
+      state: { category: productCategory, search: searchProduct },
+    });
 
   useEffect(() => {
     setFilteredSearchProduct(
@@ -30,6 +38,7 @@ function HeadSearchProvider(props) {
         setProductCategory,
         inputExist,
         setInputExist,
+        goShop
       }}
     >
       {props.children}

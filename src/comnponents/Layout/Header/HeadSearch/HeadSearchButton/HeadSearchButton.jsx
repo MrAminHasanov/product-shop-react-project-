@@ -5,13 +5,7 @@ import c from "./HeadSearchButton.module.scss";
 import { HeadSearchContext } from "context/HeadSearchContext/HeadSearchContext";
 
 function HeadSearchButton() {
-  const { productCategory, searchProduct } = useContext(HeadSearchContext);
-  const navigator = useNavigate();
-
-  const goShop = () =>
-    navigator("/shop", {
-      state: { category: productCategory, search: searchProduct },
-    });
+  const { goShop } = useContext(HeadSearchContext);
 
   return (
     <div className={c.component}>

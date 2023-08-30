@@ -2,6 +2,7 @@ import { useState } from "react";
 import c from "./FavoriteBtn.module.scss";
 import FavoriteSummary from "./FavoriteSummary/FavoriteSummary";
 import { useNavigate } from "react-router-dom";
+import { usePathEffect } from "hooks/usePathEffect";
 
 function FavoriteBtn({ screenState }) {
   const [openBox, setOpenBox] = useState(false);
@@ -12,6 +13,8 @@ function FavoriteBtn({ screenState }) {
   const favoriteClickAction = () => {
     screenState === "default" ? setOpenBox(!openBox) : goFavoritePage();
   };
+  usePathEffect(() => setOpenBox(false));
+
   return (
     <div className={c.component}>
       <button>

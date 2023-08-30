@@ -2,9 +2,10 @@ import { useSelector } from "react-redux";
 import c from "./FavoriteTogleBtn.module.scss";
 import { useActions } from "hooks/useActions";
 import { useEffect, useState } from "react";
+import { selectFavoriteList } from "Store/UseStateSelector";
 
 function FavoriteTogleBtn({ id }) {
-  const { favoriteList } = useSelector((state) => state);
+  const favoriteList = useSelector(selectFavoriteList);
   const { toggleToFavorites } = useActions();
 
   const [favoriteExist, setFavoriteExist] = useState("");
