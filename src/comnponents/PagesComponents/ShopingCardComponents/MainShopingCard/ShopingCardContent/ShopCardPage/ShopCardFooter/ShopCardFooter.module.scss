@@ -9,6 +9,11 @@
         text-decoration: none;
         font-weight: 600;
         height: 50px;
+        transition: .4s ease all;
+        &:hover {
+            background-color: #7fad39;
+            color: white;
+        }
     }
     .cardTotal {
         background-color: rgb(245, 245, 245);

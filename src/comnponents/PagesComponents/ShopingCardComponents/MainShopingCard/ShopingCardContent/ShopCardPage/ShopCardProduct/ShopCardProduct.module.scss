@@ -58,4 +58,13 @@
         }
         --cardWidth: 120px;
     }
+
+    @media only screen and (max-width: 440px) {
+        .productActionBox {
+            padding: 2em 0px;
+        }
+    }
+    @media only screen and (max-width: 390px) {
+        --cardWidth: 100px
+    }
 }

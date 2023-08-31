@@ -25,6 +25,9 @@ function FavoriteBtn({ screenState }) {
         />
       </button>
       {openBox && (
+        <div onClick={() => setOpenBox(false)} className={c.backgrounde}></div>
+      )}
+      {openBox && (
         <div className={c.favoriteBox}>
           <FavoriteSummary />
         </div>

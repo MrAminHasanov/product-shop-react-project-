@@ -1,4 +1,4 @@
-import c from "./MainShopingCard.module.scss";
+// import c from "./MainShopingCard.module.scss";
 import SecondHeader from "comnponents/GlobalComnponets/SecondHeader/SecondHeader";
 import ShopingCardContent from "./ShopingCardContent/ShopingCardContent";
 

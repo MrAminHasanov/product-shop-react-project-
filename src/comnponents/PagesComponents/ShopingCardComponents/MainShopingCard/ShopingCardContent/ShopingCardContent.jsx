@@ -10,6 +10,7 @@ function ShopingCardContent() {
   const [selectedList, setSelectedList] = useState(
     page === null ? "shopList" : page
   );
+
   return (
     <div className={c.component}>
       <div className={c.listNav}>
