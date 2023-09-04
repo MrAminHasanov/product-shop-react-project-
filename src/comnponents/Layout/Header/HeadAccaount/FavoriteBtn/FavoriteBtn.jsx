@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { usePathEffect } from "hooks/usePathEffect";
 
@@ -15,7 +15,7 @@ function FavoriteBtn({ screenState }) {
     screenState === "default" ? setOpenBox(!openBox) : goFavoritePage();
   };
 
-  usePathEffect(setOpenBox,false);
+  usePathEffect(setOpenBox, false);
 
   return (
     <div className={c.component}>

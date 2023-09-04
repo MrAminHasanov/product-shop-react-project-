@@ -11,7 +11,7 @@
             color: rgb(112, 112, 112);
             margin-bottom: 26px;
             &:hover {
-                transform: scale (1.03);
+                scale: 1.03;
             }
             span {
                 cursor: pointer;
@@ -30,7 +30,7 @@
     @media only screen and (max-width: 570px) {
         li:nth-child(2n) {
             display: flex;
-            justify-content: end;
+            justify-content: flex-end;
         }
     }
 }

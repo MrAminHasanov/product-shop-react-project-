@@ -10,7 +10,7 @@ function RandomBlogs() {
   const {id} =useParams();
   const { randomElement } = useContext(BlogContext);
   const [randomBlogElement, setRandomBlogElement] = useState(randomElement());
-  useEffect(() => setRandomBlogElement(randomElement()), [id]);
+  useEffect(() => setRandomBlogElement(randomElement()), [id,randomElement]);
 
   return (
     <div className={c.component}>
