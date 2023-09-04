@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 
 import c from "./HeadSearchInput.module.scss";
 import { HeadSearchContext } from "context/HeadSearchContext/HeadSearchContext";
@@ -15,14 +15,14 @@ function HeadSearchInput() {
     goShop,
   } = useContext(HeadSearchContext);
 
-  usePathEffect(() => setSearchProduct(""));
+  usePathEffect(setSearchProduct, "");
 
-  const enterEvent = (e)=>{
-    if(e.key=== "Enter"){
-      goShop()
-      setInputExist(false)
+  const enterEvent = (e) => {
+    if (e.key === "Enter") {
+      goShop();
+      setInputExist(false);
     }
-  }
+  };
 
   return (
     <div className={c.component}>

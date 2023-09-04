@@ -17,8 +17,8 @@ function SideBar() {
         <span>
           Product Filter{" "}
           <i
-            className={`fa-solid fa-arrow-down`}
-            style={filterState ? { transform: "rotate(-180deg)" } : null}
+            className={`fa-solid fa-arrow-up`}
+            style={filterState ? { transform: "rotate(180deg)" } : null}
           ></i>
         </span>
         <div className={c.backgrounde}></div>

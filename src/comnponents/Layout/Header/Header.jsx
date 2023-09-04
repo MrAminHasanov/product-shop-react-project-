@@ -13,7 +13,8 @@ import { usePathEffect } from "hooks/usePathEffect";
 
 function Header() {
   const [mobileMenuState, setMobileMenuState] = useState(false);
-  usePathEffect(() => setMobileMenuState(false));
+ 
+  usePathEffect(setMobileMenuState,false);
 
   return (
     <div className={c.component}>
