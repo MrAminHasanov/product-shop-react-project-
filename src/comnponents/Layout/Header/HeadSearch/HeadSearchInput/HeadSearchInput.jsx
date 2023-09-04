@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 
 import c from "./HeadSearchInput.module.scss";
 import { HeadSearchContext } from "context/HeadSearchContext/HeadSearchContext";
