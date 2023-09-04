@@ -1,6 +1,6 @@
 import { useContext } from "react";
 
-import c from "./BlogCategorySelector.module.scss";
+import c from "./BlogCategorySelector.module.scss"
 import { BlogCategory, BlogContext } from "context/BlogContext/BlogContext";
 
 function BlogCategorySelector() {

@@ -18,7 +18,7 @@ function ProductContent() {
       );
     });
     return () => clearInterval(ShopInterval);
-  }, []);
+  }, [setProductCountInPage]);
 
   return (
     <div className={c.component} id="main">

@@ -1,4 +1,3 @@
-import c from "./ShopingCard.module.scss";
 import MainShopingCard from "comnponents/PagesComponents/ShopingCardComponents/MainShopingCard/MainShopingCard";
 
 function ShopingCard() {

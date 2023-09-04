@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./global.scss";
 
 import Layout from "./Layout/Layout";
@@ -24,7 +24,7 @@ function App() {
             <Route path="contact" element={<Contact />} />
             <Route path="shoping-card" element={<ShopingCard />} />
             <Route path="shop/product-info/:id" element={<ProductPage />} />
-            <Route path="blog/blog-info/:id" element={<BlogInfoPage/>}/>
+            <Route path="blog/blog-info/:id" element={<BlogInfoPage />} />
           </Route>
         </Routes>
       </BlogProvider>

@@ -1,8 +1,9 @@
-import { useState } from "react";
-import c from "./FavoriteBtn.module.scss";
-import FavoriteSummary from "./FavoriteSummary/FavoriteSummary";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { usePathEffect } from "hooks/usePathEffect";
+
+import c from "./FavoriteBtn.module.scss";
+import FavoriteSummary from "./FavoriteSummary/FavoriteSummary";
 
 function FavoriteBtn({ screenState }) {
   const [openBox, setOpenBox] = useState(false);
@@ -13,7 +14,8 @@ function FavoriteBtn({ screenState }) {
   const favoriteClickAction = () => {
     screenState === "default" ? setOpenBox(!openBox) : goFavoritePage();
   };
-  usePathEffect(() => setOpenBox(false));
+
+  usePathEffect(setOpenBox,false);
 
   return (
     <div className={c.component}>
@@ -24,9 +26,9 @@ function FavoriteBtn({ screenState }) {
           onClick={() => favoriteClickAction()}
         />
       </button>
-      {openBox && (
+      {/* {openBox && (
         <div onClick={() => setOpenBox(false)} className={c.backgrounde}></div>
-      )}
+      )} */}
       {openBox && (
         <div className={c.favoriteBox}>
           <FavoriteSummary />

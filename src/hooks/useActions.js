@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { bindActionCreators } from "redux";
 import { actions as favoriteList } from "Store/ProductFavoriteList/ProductFavoriteList.slice";
 import { actions as shopList } from "Store/ProductShopList/ProductShopList";

@@ -13,9 +13,11 @@ function HeadSearchCategoryBtn() {
   const typeList = ["All", ...productTypeList.map((type) => type.name)];
   useEffect(
     () => setCategoryListOnOff(inputExist ? false : categoryListOnOff),
-    [inputExist]
+    [inputExist, categoryListOnOff]
   );
-  usePathEffect(() => setCategoryListOnOff(false));
+
+  usePathEffect(setCategoryListOnOff, false);
+  
   return (
     <button
       className={c.categorieBT}

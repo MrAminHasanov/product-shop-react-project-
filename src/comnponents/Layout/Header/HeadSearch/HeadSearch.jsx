@@ -1,5 +1,3 @@
-import { useNavigate } from "react-router-dom";
-
 import c from "./HeadSearch.module.scss";
 import HeadSearchCategoryBtn from "./HeadSearchCategoryBtn/HeadSearchCategoryBtn";
 import HeadSearchInput from "./HeadSearchInput/HeadSearchInput";

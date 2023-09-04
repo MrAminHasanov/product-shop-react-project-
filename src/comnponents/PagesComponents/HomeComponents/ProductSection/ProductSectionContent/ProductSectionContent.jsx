@@ -1,5 +1,3 @@
-import { useSelector } from "react-redux";
-
 import c from "./ProductSectionContent.module.scss";
 import Product from "../../../../GlobalComnponets/Product/Product";
 import { productList } from "../../../../../context/ProductContext/ProductContext";

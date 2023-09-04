@@ -1,5 +1,5 @@
-import ProductActionArea from "./ProductActionArea/ProductActionArea";
 import c from "./ProductPageSideMenu.module.scss";
+import ProductActionArea from "./ProductActionArea/ProductActionArea";
 
 function ProductPageSideMenu({ name, price, id }) {
   return (

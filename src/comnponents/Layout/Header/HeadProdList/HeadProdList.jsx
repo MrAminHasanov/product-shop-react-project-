@@ -3,15 +3,14 @@ import { usePathEffect } from "hooks/usePathEffect";
 
 import c from "./HeadProdlist.module.scss";
 
-
 function HeadProdList() {
   const [lof, setLof] = useState(false);
-  usePathEffect(() => {setLof(false)});
+
+  usePathEffect(setLof, false);
 
   return (
     <div className={c.component}>
       <button onClick={() => setLof(!lof)}>
-        <i></i>
         All departaments
         <i
           className={"fa-solid fa-arrow-down"}
