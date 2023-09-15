@@ -23,11 +23,13 @@ function Carusel() {
     } else if (position === caruselLength + 1) {
       setPosition(0);
     }
+  }, [position, caruselLength]);
+  useEffect(() => {
     const interval = setInterval(() => {
-      setPosition(position + 1);
+      setPosition(position => position + 1);
     }, 3500);
     return () => clearInterval(interval);
-  }, [position, caruselLength]);
+  }, [])
 
   return (
     <div className={c.component}>

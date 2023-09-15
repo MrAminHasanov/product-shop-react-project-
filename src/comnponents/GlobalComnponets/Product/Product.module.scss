@@ -14,6 +14,9 @@ $lg-textcolor: rgb(85, 85, 85);
     width: 75%;
     height: 100%;
     animation: productInit 0.4s;
+    a{
+        display: block;
+    }
     img {
         object-fit: contain;
         width: 100%;

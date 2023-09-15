@@ -6,10 +6,10 @@ function CaruselBox({ info }) {
   const goShop = () =>
     navigate("/shop", { state: { category: info.name, search: "" } });
   return (
-    <div className={c.component} style={{ "--color": info.bg }}>
+    <div className={c.component} onClick={() => goShop()} style={{ "--color": info.bg }}>
       <div className={c.inner}>
         <img className={c.image} src={info.img} alt={info.name}></img>
-        <div onClick={() => goShop()} className={c.title}>
+        <div className={c.title}>
           {info.name}
         </div>
       </div>
