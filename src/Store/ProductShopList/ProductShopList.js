@@ -7,7 +7,6 @@ export const ProductShopListSlice = createSlice({
   initialState,
   reducers: {
     toggleToShopList: (state, { payload: Pid }) => {
-      debugger
       if (Pid in state) {
         delete state[Pid];
       } else {
