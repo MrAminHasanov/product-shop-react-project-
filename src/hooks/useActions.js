@@ -8,6 +8,7 @@ const rootActions = {
   ...favoriteList,
   ...shopList,
 };
+
 export const useActions = () => {
   const dispatch = useDispatch();
   return useMemo(() => bindActionCreators(rootActions, dispatch), [dispatch]);

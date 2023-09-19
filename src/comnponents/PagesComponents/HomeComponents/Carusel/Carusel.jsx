@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import c from "./Carusel.module.scss";
 
 import CaruselBox from "./CaruselBox/CaruselBox";
@@ -7,10 +7,11 @@ import { productTypeList } from "context/ProductContext/ProductContext";
 function Carusel() {
   const [position, setPosition] = useState(0);
   const [caruselColumns, setCaruselColumns] = useState(0);
+  const caruselLink = useRef();
   useEffect(() => {
     setCaruselColumns(
       window
-        .getComputedStyle(document.querySelector(`.${c.carousel}`))
+        .getComputedStyle(caruselLink.current)
         .getPropertyValue("--columns")
     );
   }, [position]);
@@ -45,6 +46,7 @@ function Carusel() {
             "--position": position,
           }}
           className={c.carousel}
+          ref={caruselLink}
         >
           {productTypeList.map((item, index) => (
             <li key={index}>

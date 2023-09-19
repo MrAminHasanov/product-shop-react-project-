@@ -6,7 +6,7 @@ import ShopCardButon from "./ShopCardButon/ShopCardButon";
 
 function Product({ product }) {
   return (
-    <div className={c.product}>
+    <div className={c.product}> 
       <img src={product.img} alt={product.name}></img>
       <div className={c.productName}>
         <Link

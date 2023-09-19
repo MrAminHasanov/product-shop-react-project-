@@ -1,12 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {0:1,2:3,5:6,4:3};
+const initialState = { 0: 1, 2: 3, 5: 6, 4: 3 };
 
 export const ProductShopListSlice = createSlice({
   name: "shopList",
   initialState,
   reducers: {
     toggleToShopList: (state, { payload: Pid }) => {
+      debugger
       if (Pid in state) {
         delete state[Pid];
       } else {
