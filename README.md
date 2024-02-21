@@ -1,2 +1,2 @@
-https://aminhesenovevoproject.netlify.app/
-link for this project
+npm i
+npm start
