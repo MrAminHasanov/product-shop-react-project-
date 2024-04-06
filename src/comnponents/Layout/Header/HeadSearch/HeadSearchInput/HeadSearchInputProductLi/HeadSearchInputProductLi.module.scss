@@ -2,19 +2,23 @@
     img {
         width: 70px;
     }
+
     padding: 8px 12px;
-    display: flex;  
+    display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
     background-color: white;
-    .productName{
+    transition: .4s ease border-color;
+    border: 2px solid transparent;
+    cursor: pointer;
+
+    .productName {
         color: black;
-        cursor: pointer;
         text-decoration: none;
-        transition: .4s color;
-        &:hover {
-            color:rgb(252, 60, 60);
-        }
+    }
+
+    &:hover {
+        border-color: #7fad39;
     }
 }

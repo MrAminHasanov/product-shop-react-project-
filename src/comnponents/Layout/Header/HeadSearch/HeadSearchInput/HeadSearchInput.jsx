@@ -25,12 +25,13 @@ function HeadSearchInput() {
   };
 
   return (
-    <div className={c.component}>
+    <div className={c.component}
+      tabIndex={1}
+      onFocus={() => setInputExist(true)}
+      onBlur={() => setInputExist(false)}>
       <input
         className={c.input}
         value={searchProduct}
-        onFocus={() => setInputExist(true)}
-        onBlur={() => setTimeout(() => setInputExist(false), 200)}
         onChange={(e) => setSearchProduct(e.target.value)}
         onKeyDown={(e) => enterEvent(e)}
         placeholder="What do you need?"
