@@ -8,4 +8,4 @@ npm start
 
 //Стэк: React/scss
 
-[//Сылка на дэплоймент](https://aminhesenovevoproject.netlify.app/)
+[//Сылка на дэплоймент](https://aminhesenovevoproject.netlify.app/) 
