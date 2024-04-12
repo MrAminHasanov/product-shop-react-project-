@@ -1,24 +1,22 @@
 import c from "./HeadAccaount.module.scss";
 import FavoriteList from "./FavoriteList/FavoriteList";
 import { BsBagFill } from "react-icons/bs";
+import { screenState } from "@/types/type";
 
-function HeadAccaount({ screenState }) {
-  // const activePage = ({ isActive }) => (isActive ? c.active : null);
+function HeadAccaount({ screenState }: { screenState: screenState }) {
   return (
     <div
       className={c.component}
       style={
         screenState === "default"
-          ? { "--defaultList": "grid", "--mobileList": "none" }
-          : { "--mobileList": "grid", "--defaultList": "none" }
+          ? { "--defaultList": "grid", "--mobileList": "none" } as React.CSSProperties
+          : { "--mobileList": "grid", "--defaultList": "none" } as React.CSSProperties
       }
     >
       <FavoriteList screenState={screenState} />
-      {/* <NavLink to={"/shoping-card"} className={activePage}> */}
       <a href="#">
         <BsBagFill size={20} />
       </a>
-      {/* </NavLink> */}
       <p>
         item:<b>$150.000</b>
       </p>

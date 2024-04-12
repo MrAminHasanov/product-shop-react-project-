@@ -1,5 +1,6 @@
-import type { Metadata } from "next";
 import "./global.scss";
+import type { Metadata } from "next";
+
 import Header from "../comnponents/Layout/Header/Header";
 
 

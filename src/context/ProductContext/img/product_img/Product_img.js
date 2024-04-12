@@ -12,9 +12,9 @@ import nuggets from "./ChickenNuggets.jpg";
 import legNuugets from "./chickenNuggetsWithLegs.jpg";
 import apricot from "./DriedApricots.jpeg";
 import mixJuice from "./MixedFruiteJuice.webp";
-import orangeJuice from  "./OrangeJuice.jpg";
+import orangeJuice from "./OrangeJuice.jpg";
 import summerJuice from "./SummerFruitsJuice.jpg";
 import yogurt from "./Yogurt.webp"
 
-const productImg={yogurt,onion,apple,beef,chees,chicken,milk,orange,potato,carrot,mango,nuggets,legNuugets,apricot,mixJuice,orangeJuice,summerJuice};
+const productImg = { yogurt, onion, apple, beef, chees, chicken, milk, orange, potato, carrot, mango, nuggets, legNuugets, apricot, mixJuice, orangeJuice, summerJuice };
 export default productImg;

@@ -1,4 +1,3 @@
-
 .categorieBT {
     position: relative;
     display: flex;
@@ -8,9 +7,6 @@
     font-size: 1em;
     .title {
         font-weight: 700;
-    }
-    i {
-        transition: 0.4s ease all;
     }
     .categoryList {
         border: 1px solid var(--bd-color);

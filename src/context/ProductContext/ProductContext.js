@@ -133,7 +133,11 @@ export const productList = [
 ];
 
 export const productTypeList = [
-  { name: productType.meat, img: productTypeImg.Meat, bg: "rgb(199, 2, 2)" },
+  {
+    name: productType.meat,
+    img: productTypeImg.Meat,
+    bg: "rgb(199, 2, 2)"
+  },
   {
     name: productType.fruite,
     img: productTypeImg.freshFruit,

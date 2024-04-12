@@ -1,8 +1,7 @@
 "use client"
 
-import { useCallback, useState } from "react";
+import { useState } from "react";
 import { IoMdHeart } from "react-icons/io";
-// import { usePathEffect } from "hooks/usePathEffect";
 
 import c from "./FavoriteList.module.scss";
 
@@ -21,8 +20,6 @@ function FavoriteList({ screenState }: { screenState: string }) {
       goFavoritePage();
     }
   }
-
-  // usePathEffect(setOpenBox, false);
 
   return (
     <div className={c.component}>

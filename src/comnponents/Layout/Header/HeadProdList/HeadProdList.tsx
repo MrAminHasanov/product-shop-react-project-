@@ -1,11 +1,12 @@
 'use client'
 
-import c from "./HeadProdlist.module.scss";
 import { useState } from "react";
-
-import ProdList from "./ProdList/ProdList";
-import { CgArrowRight } from "react-icons/cg";
 import classNames from "classnames";
+
+import c from "./HeadProdlist.module.scss";
+
+import { CgArrowRight } from "react-icons/cg";
+import ProdList from "./ProdList/ProdList";
 
 function HeadProdList() {
   const [listState, setListState] = useState(false);
