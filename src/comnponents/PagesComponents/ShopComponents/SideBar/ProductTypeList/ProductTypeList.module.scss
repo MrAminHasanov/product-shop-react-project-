@@ -1,0 +1,59 @@
+.component {
+    .title {
+        font-weight: 800;
+        font-size: 22px;
+    }
+    ul {
+        overflow-x: scroll;
+        &::-webkit-scrollbar {
+            width: 0px;
+        }
+    }
+    .typeList {
+        list-style: none;
+        padding-top: 1em;
+        li {
+            font-size: 18px;
+            white-space: nowrap;
+            padding: 10px 0px;
+            span {
+                cursor: pointer;
+                position: relative;
+                &::after {
+                    transition: 0.8s all;
+                    opacity: 0;
+                    content: " ";
+                    display: block;
+                    border-radius: 30px;
+                    width: 130%;
+                    height: 4px;
+                    top: 120%;
+                    position: absolute;
+                    background-color: green;
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 680px) {
+        ul {
+            display: flex;
+            li {
+                padding: 8px !important;
+                font-size: 16px;
+            }
+        }
+        .title {
+            font-size: 24px;
+        }
+        span::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+.active {
+    font-weight: 700;
+}
+.active::after {
+    opacity: 1 !important;
+}

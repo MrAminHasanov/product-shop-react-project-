@@ -1,0 +1,15 @@
+.component {
+    padding: 2em 0px;
+    .prodyctContainer {
+        justify-items: center;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        @media only screen and (max-width: 860px) {
+            grid-template-columns: 1fr 1fr;
+        }
+        @media only screen and (max-width: 570px) {
+            grid-template-columns: 1fr;
+        }
+    }
+}

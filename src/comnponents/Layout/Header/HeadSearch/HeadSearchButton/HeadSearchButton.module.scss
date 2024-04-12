@@ -1,0 +1,38 @@
+// #region Variebles
+$salat: #7fad39;
+$bd-color: rgb(216, 215, 215);
+$lg-textcolor: rgb(85, 85, 85);
+// #endregion
+.component {
+    .searchBT {
+        border: none;
+        background-color: $salat;
+        width: 100%;
+        height: 100%;
+        .title {
+            font-size: 16px;
+            font-weight: 900;
+            color: white;
+        }
+        .mobilIcon {
+            color: white;
+        }
+    }
+
+    .mobilIcon {
+        display: none;
+        font-size: 1.4em;
+    }
+
+    @media only screen and (max-width: 570px) {
+        .mobilIcon {
+            display: block;
+        }
+        .title{
+            display: none;
+        }
+        .icon {
+            display: none;
+        }
+    }
+}

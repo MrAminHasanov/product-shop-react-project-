@@ -1,0 +1,40 @@
+.component {
+    padding-bottom: 2em;
+    width: 90%;
+    .title {
+        padding-bottom: 1em;
+        font-weight: 800;
+        font-size: 22px;
+    }
+}
+.inputBox {
+    display: flex;
+    --inputBorderRadius: 30px;
+    background:
+        linear-gradient(#fff, #fff) padding-box,
+        linear-gradient(120deg, #34acba, #7fad39) border-box;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    * {
+        outline: none;
+        border: none;
+    }
+    input {
+        padding-left: 18px;
+        font-size: 16px;
+        height: 30px;
+        width: 90%;
+        border-bottom-left-radius: var(--inputBorderRadius);
+        border-top-left-radius: var(--inputBorderRadius);
+    }
+    button {
+        content: " ";
+        cursor: pointer;
+        border-left: 2px solid rgb(180, 180, 180) !important;
+        background-color: rgb(243, 243, 243);
+        width: 10%;
+        height: 30px;
+        border-bottom-right-radius: var(--inputBorderRadius);
+        border-top-right-radius: var(--inputBorderRadius);
+    }
+}

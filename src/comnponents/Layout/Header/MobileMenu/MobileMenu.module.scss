@@ -1,0 +1,21 @@
+.component{
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    left: 0;
+    top: 0; 
+    display: none;
+    @media only screen and (max-width:1000px) {
+        display: block;
+    }
+}
+
+.menuBackground{
+    position: absolute;
+    left: -180px;
+    top: -10px;
+    background-color: black;
+    opacity: 0.5;
+    width: calc(100% + 180px);
+    height: 110vh;
+}

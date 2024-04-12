@@ -1,0 +1,19 @@
+.component {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    --blogWidth: 48%;
+    max-height: 200vh;
+    display: grid;
+    grid-template-columns: var(--blogWidth) var(--blogWidth);
+    justify-content: space-between;
+    padding: 0px 0px 2em 0px;
+    row-gap: 50px;
+    border-bottom: 1px solid rgb(211, 211, 211);
+    &::-webkit-scrollbar {
+        width: 0px;
+    }
+    @media only screen and (max-width: 680px) {
+        margin-top: 3em;
+        grid-template-columns: 1fr;
+    }
+}

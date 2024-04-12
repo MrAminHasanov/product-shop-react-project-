@@ -1,0 +1,66 @@
+.component {
+    padding: 3em 0px;
+    display: flex;
+    justify-content: space-between;
+    a {
+        padding: 15px 24px;
+        color: rgb(117, 117, 117);
+        background-color: rgb(245, 245, 245);
+        text-decoration: none;
+        font-weight: 600;
+        height: 50px;
+        transition: .4s ease all;
+        &:hover {
+            background-color: #7fad39;
+            color: white;
+        }
+    }
+    .cardTotal {
+        background-color: rgb(245, 245, 245);
+        width: 500px;
+        padding: 16px;
+        p {
+            font-weight: 700;
+            font-size: 22px;
+        }
+        hr {
+            opacity: 0.3;
+            margin-top: 2em;
+            color: rgb(233, 233, 233);
+        }
+        ul {
+            font-weight: 700;
+            padding: 1em 0px;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            list-style: none;
+            font-size: 18px;
+            li:last-child {
+                color: rgb(214, 12, 12);
+            }
+        }
+        button {
+            width: 100%;
+            color: white;
+            font-size: 17px;
+            background-color: #7fad39;
+            border: none;
+            font-weight: 700;
+            padding: 12px 0px;
+        }
+        @media only screen and (max-width: 860px) {
+            width: 350px;
+        }
+    }
+
+    @media only screen and (max-width: 680px) {
+        flex-direction: column;
+        align-items: center;
+
+        .cardTotal {
+            margin-top: 2em;
+            width: 100%;
+        }
+    }
+}

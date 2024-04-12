@@ -1,0 +1,23 @@
+// #region Variebles
+$salat: #7fad39;
+$bd-color: rgb(216, 215, 215);
+$lg-textcolor: rgb(85, 85, 85);
+// #endregion
+
+.component {
+    position: absolute;
+    z-index: 4;
+    padding: 10px;
+    padding-top: 0px;
+    border: 2px solid rgb(194, 194, 194);
+    width: 240px;
+    height: 310px;
+    overflow-y: auto;
+    &::-webkit-scrollbar{
+        width: 0px;
+    }
+    background-color: white;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 0.64em;
+}

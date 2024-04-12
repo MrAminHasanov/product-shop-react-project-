@@ -1,0 +1,34 @@
+.component {
+    padding-bottom: 2.5em;
+
+    h2 {
+        font-size: 32px;
+        font-weight: 800;
+        position: relative;
+        display: flex;
+        justify-content: space-evenly;
+        &::after {
+            top: 115%;
+            transform: translateX(-50%);
+            left: 50%;
+            content: " ";
+            width: 70px;
+            border-radius: 8px;
+            height: 4px;
+            background-color: #7fad39;
+            color: #7fad39;
+            position: absolute;
+        }
+        @media only screen and (max-width: 700px) {
+            font-size: 28px;
+        }
+
+        @media only screen and (max-width: 500px) {
+            font-size: 22px;
+        }
+
+        @media only screen and (max-width: 300px) {
+            font-size: 18px;
+        }
+    }
+}

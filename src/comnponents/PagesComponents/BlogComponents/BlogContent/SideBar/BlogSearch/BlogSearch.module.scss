@@ -1,0 +1,33 @@
+.component {
+    .inputBar {
+        border-bottom: 1px solid #7fad39;
+        padding-bottom: 4px;
+        border-radius: 40px;
+        display: flex;
+        width: 100%;
+        height: 45px;
+        $BorderRadius: 30px;
+        & > * {
+            border: 1px solid rgb(221, 221, 221);
+            outline: none;
+            border-top-left-radius: $BorderRadius;
+            border-bottom-left-radius: $BorderRadius;
+            border-right: none;
+        }
+        input {
+            font-size: 15px;
+            padding-left: 14px;
+            width: calc(100% - 40px);
+            height: 100%;
+        }
+        button {
+            font-size: 16px;
+            color: rgb(139, 139, 139);
+            transform: rotateY(180deg);
+            background-color: white;
+            text-align: center;
+            width: 40px;
+            height: 100%;
+        }
+    }
+}

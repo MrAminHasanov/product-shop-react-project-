@@ -1,0 +1,23 @@
+.ProductSectionContent {
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        width: 0px;
+    }
+    max-height: 150vh;
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    justify-items: center;
+    --columns: 4;
+    @media (max-width: 900px) {
+        gap: 20px;
+        --columns: 3;
+    }
+    @media (max-width: 700px) {
+        gap: 60px;
+        --columns: 2;
+    }
+    @media (max-width: 570px) {
+        --columns: 1;
+        padding: 0px 1em;
+    }
+}

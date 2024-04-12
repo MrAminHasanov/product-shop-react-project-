@@ -1,0 +1,52 @@
+.component {
+    .list {
+        .listHeader {
+            justify-content: space-between;
+            display: flex;
+            font-size: 20px;
+            font-weight: 700;
+            padding: 0px 20px;
+            .actionHead {
+                width: 430px;
+                display: flex;
+                justify-content: space-between;
+                .price,
+                .favoriteSpace,
+                .total {
+                    width: 50px;
+                }
+                .count {
+                    width: 140px;
+                }
+                .deleteSpace {
+                    content: " ";
+                    width: 21px;
+                }
+                @media only screen and (max-width: 1040px) {
+                    width: 400px;
+                }
+                @media only screen and (max-width: 860px) {
+                    width: 350px;
+                    .count {
+                        width: 120px;
+                    }
+                }
+                @media only screen and (max-width: 680px) {
+                    width: 300px;
+                    .count {
+                        width: 100px;
+                    }
+                    .favoriteSpace {
+                        width: 40px;
+                    }
+                }
+            }
+            @media only screen and (max-width: 680px) {
+                font-size: 14px;
+            }
+            @media only screen and (max-width: 570px) {
+                display: none;
+            }
+        }
+    }
+}

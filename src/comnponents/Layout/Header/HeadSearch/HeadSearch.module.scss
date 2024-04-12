@@ -1,0 +1,28 @@
+// #region Variebles
+$salat: #7fad39;
+$bd-color: rgb(216, 215, 215);
+$lg-textcolor: rgb(85, 85, 85);
+// #endregion
+.component {
+    display: grid;
+    grid-template-columns: 25% 57% 18%;
+    grid-area: Search;
+    height: 80%;
+    margin: auto 0px;
+
+    > * {
+        border: 1px solid $bd-color;
+        outline: none;
+    }
+
+    button {
+        cursor: pointer;
+    }
+
+    @media (max-width: 525px) {
+        flex-direction: column;
+    }
+    @media only screen and (max-width: 570px) {
+        grid-template-columns: 18% 64% 18%;
+    }
+}

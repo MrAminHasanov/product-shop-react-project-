@@ -1,0 +1,18 @@
+.component {
+    width: 100%;
+}
+.topBorder {
+    transform: translateY(-100%);
+    width: 100%;
+    left: 0%;
+    height: 42px;
+    background-color: rgb(194, 192, 192);
+    position: absolute;
+    display: none;
+}
+
+@media only screen and (max-width: 680px) {
+    .topBorder {
+        display: block;
+    }
+}

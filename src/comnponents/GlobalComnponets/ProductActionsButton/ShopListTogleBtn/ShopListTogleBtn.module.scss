@@ -1,0 +1,27 @@
+.cardAdd {
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+    height: var(--height);
+    background-color: #7fad39;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    margin-top: var(--mrt);
+    font-weight: 800;
+    padding: 0px 30px;
+    transition: 0.8s ease all;
+    &:hover {
+        color: black;
+        background-color: rgb(243, 243, 243);
+    }
+}
+.activeAddCard {
+    color: black;
+    background-color: rgb(243, 243, 243);
+    &:hover {
+        background-color: #7fad39;
+        color: white;
+    }
+}

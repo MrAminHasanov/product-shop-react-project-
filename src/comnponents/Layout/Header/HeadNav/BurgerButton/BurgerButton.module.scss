@@ -1,0 +1,19 @@
+.component {
+    width: 35px;
+    display: var(--defaultList);
+    position: absolute;
+    right: 2%;
+    transform: translateY(50%);
+    div {
+        &:nth-child(2) {
+            margin: 8px 0px;
+        }
+        border-radius: 20%;
+        height: 4px;
+        background-color: black;
+    }
+
+    @media only screen and (max-width: 1000px) {
+        display: var(--mobileList);
+    }
+}
