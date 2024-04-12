@@ -1,40 +1,30 @@
-import { useState } from "react";
-import { usePathEffect } from "hooks/usePathEffect";
+'use client'
 
 import c from "./HeadProdlist.module.scss";
+import { useState } from "react";
+
+import ProdList from "./ProdList/ProdList";
+import { CgArrowRight } from "react-icons/cg";
+import classNames from "classnames";
 
 function HeadProdList() {
-  const [lof, setLof] = useState(false);
+  const [listState, setListState] = useState(false);
+  const handleClick = () => setListState(!listState);
+  const iconClass = classNames({ [c.activeIcon]: listState })
 
-  usePathEffect(setLof, false);
+  // usePathEffect(setLof, false);
 
   return (
     <div className={c.component}>
-      <button onClick={() => setLof(!lof)}>
+      <button onClick={handleClick}>
         All departaments
-        <i
-          className={"fa-solid fa-arrow-down"}
-          style={{
-            transform: lof ? "rotate(-180deg)" : " ",
-            transition: "ease all .5s",
-          }}
-        ></i>
+        <CgArrowRight
+          size={22}
+          className={iconClass}
+        />
       </button>
-      <ul style={!lof ? { height: 0 } : null}>
-        <li>Fresh meat</li>
-        <li>Vegetebales</li>
-        <li>Fresh meat</li>
-        <li>Vegetebales</li>
-        <li>Fresh meat</li>
-        <li>Vegetebales</li>
-        <li>Fresh meat</li>
-        <li>Vegetebales</li>
-        <li>Fresh meat</li>
-        <li>Vegetebales</li>
-        <li>Fresh meat</li>
-        <li>Vegetebales</li>
-      </ul>
-    </div>
+      <ProdList listState={listState} />
+    </div >
   );
 }
 

@@ -2,7 +2,7 @@ import c from "./Header.module.scss";
 import HeadLogo from "./HeadLogo/HeadLogo";
 import HeadNav from "./HeadNav/HeadNav";
 import HeadAccaount from "./HeadAccaount/HeadAccaount";
-// import HeadProdList from "./HeadProdList/HeadProdList";
+import HeadProdList from "./HeadProdList/HeadProdList";
 // import HeadSearch from "./HeadSearch/HeadSearch";
 // import HeadContact from "./HeadContact/HeadContact";
 // import MobileMenu from "./MobileMenu/MobileMenu";
@@ -19,7 +19,7 @@ function Header() {
 
       <HeadAccaount screenState={"default"} />
 
-      {/* <HeadProdList /> */}
+      <HeadProdList />
       {/* <HeadSearchProvider>
         <HeadSearch />
       </HeadSearchProvider> */}
