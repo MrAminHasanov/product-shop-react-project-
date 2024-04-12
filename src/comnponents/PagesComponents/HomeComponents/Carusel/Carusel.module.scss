@@ -1,8 +1,4 @@
-// #region Variebles
-$salat: #7fad39;
-$bd-color: rgb(216, 215, 215);
-$lg-textcolor: rgb(85, 85, 85);
-// #endregion
+
 
 .component {
   margin-top: 32px;
@@ -12,7 +8,7 @@ $lg-textcolor: rgb(85, 85, 85);
   gap: 16px;
   align-items: center;
   border: 2px solid;
-  $borderColor:$salat;
+  $borderColor:var(--salat);
   border-color: $borderColor transparent $borderColor transparent;
 }
 .carouselWrapper {

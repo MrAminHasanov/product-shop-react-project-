@@ -1,8 +1,4 @@
-// #region Variebles
-$salat: #7fad39;
-$bd-color: rgb(216, 215, 215);
-$lg-textcolor: rgb(85, 85, 85);
-// #endregion
+
 .product {
     * {
         user-select: none;
@@ -46,7 +42,7 @@ $lg-textcolor: rgb(85, 85, 85);
     &_button {
         padding: 3px 0px;
         width: 60%;
-        background-color: $salat;
+        background-color: var(--salat);
         border-radius: 0.7em;
         display: flex;
         justify-content: space-evenly;

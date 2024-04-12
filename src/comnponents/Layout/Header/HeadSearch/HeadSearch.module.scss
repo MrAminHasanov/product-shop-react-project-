@@ -1,8 +1,3 @@
-// #region Variebles
-$salat: #7fad39;
-$bd-color: rgb(216, 215, 215);
-$lg-textcolor: rgb(85, 85, 85);
-// #endregion
 .component {
     display: grid;
     grid-template-columns: 25% 57% 18%;
@@ -11,7 +6,7 @@ $lg-textcolor: rgb(85, 85, 85);
     margin: auto 0px;
 
     > * {
-        border: 1px solid $bd-color;
+        border: 1px solid var(--bd-color);
         outline: none;
     }
 

@@ -1,8 +1,4 @@
-// #region Variebles
-$salat: #7fad39;
-$bd-color: rgb(216, 215, 215);
-$lg-textcolor: rgb(85, 85, 85);
-// #endregion
+
 
 .component {
     grid-auto-flow: column;
@@ -20,7 +16,7 @@ $lg-textcolor: rgb(85, 85, 85);
         font-size: 1.3em;
 
         &:hover {
-            color: $salat;
+            color: var(--salat);
         }
     }
 

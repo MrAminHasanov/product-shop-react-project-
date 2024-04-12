@@ -1,12 +1,8 @@
-// #region Variebles
-$salat: #7fad39;
-$bd-color: rgb(216, 215, 215);
-$lg-textcolor: rgb(85, 85, 85);
-// #endregion
+
 .component {
     .searchBT {
         border: none;
-        background-color: $salat;
+        background-color: var(--salat);
         width: 100%;
         height: 100%;
         .title {

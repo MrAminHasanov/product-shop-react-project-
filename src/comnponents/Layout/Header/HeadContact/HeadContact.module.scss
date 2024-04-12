@@ -1,8 +1,4 @@
-// #region Variebles
-$salat: #7fad39;
-$bd-color: rgb(216, 215, 215);
-$lg-textcolor: rgb(85, 85, 85);
-// #endregion
+
 
 .component {
     display: var(--defaultList);
@@ -13,7 +9,7 @@ $lg-textcolor: rgb(85, 85, 85);
         border-radius: 50%;
         width: 48px;
         height: 48px;
-        color: $salat;
+        color: var(--salat);
         background-color: rgb(243, 243, 243);
 
         &::before {
@@ -31,7 +27,7 @@ $lg-textcolor: rgb(85, 85, 85);
         flex-direction: column;
         justify-content: space-between;
         div:last-child {
-            color: $lg-textcolor;
+            color: var(--lg-textcolor);
             font-size: 0.8em;
         }
     }

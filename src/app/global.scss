@@ -12,6 +12,11 @@
 }
 
 body {
+    --salat: #7fad39;
+    --bd-color: rgb(216, 215, 215);
+    --lg-textcolor: rgb(85, 85, 85);
+
+
     &::-webkit-scrollbar {
         width: 0px;
     }
@@ -49,10 +54,4 @@ body {
             }
         }
     }
-}
-
-body:root {
-    --salat: #7fad39;
-    --bd-color: rgb(216, 215, 215);
-    --lg-textcolor: rgb(85, 85, 85);
 }

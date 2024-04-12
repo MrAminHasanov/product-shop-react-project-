@@ -13,7 +13,7 @@
             content: " ";
             position: absolute;
             border: 0.5em solid transparent;
-            border-bottom: $salat 0.5em solid;
+            border-bottom: var(--salat) 0.5em solid;
             left: 50%;
             transform: translate(-50%, -40%);
         }

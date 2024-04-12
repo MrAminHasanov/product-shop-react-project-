@@ -1,8 +1,4 @@
-// #region Variebles
-$salat: #7fad39;
-$bd-color: rgb(216, 215, 215);
-$lg-textcolor: rgb(85, 85, 85);
-// #endregion
+
 
 .banner {
     margin-left: 25%;
@@ -29,7 +25,7 @@ $lg-textcolor: rgb(85, 85, 85);
             font-size: 2.5em;
         }
         .text2   {
-            color: $lg-textcolor;
+            color: var(--lg-textcolor);
         }
         .button {
             text-decoration: none       ;
@@ -38,7 +34,7 @@ $lg-textcolor: rgb(85, 85, 85);
             border: none;
             font-weight: 800;
             color: white;
-            background-color: $salat;
+            background-color: var(--salat);
             padding: 0.8em 2.4em;
         }
     }
