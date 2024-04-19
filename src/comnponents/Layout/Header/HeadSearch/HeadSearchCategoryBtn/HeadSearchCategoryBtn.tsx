@@ -9,11 +9,10 @@ function HeadSearchCategoryBtn() {
   const [categoryListState, setCategoryListState] = useState(false);
   const [activeCategory, setActiveCategory] = useState("All");
 
-  // usePathEffect(setCategoryListState, false);
-
+  const handleClick = () => setCategoryListState((categoryListState) => !categoryListState);
   return (
     <div className={c.component}>
-      <button onClick={() => setCategoryListState(!categoryListState)}>
+      <button onClick={handleClick} className={c.mainBtn}>
         {activeCategory === "All" ? "Categories" : activeCategory}
       </button>
       <CategoryList

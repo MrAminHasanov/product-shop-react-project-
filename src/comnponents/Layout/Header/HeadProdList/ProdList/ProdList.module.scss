@@ -1,22 +1,16 @@
 .component {
     background-color: white;
-    z-index: 3;
-    height: 444px;
-    position: absolute;
-    color: black;
     list-style: none;
     border: 1px solid var(--bd-color);
-    width: 100%;
-    overflow: hidden;
-    transition: .5s all ease;
-
-    @media only screen and (max-width: 1000px) {
-        position: relative;
-    }
+    color: black;
 
     li {
         padding: 9px 34px;
         color: var(--lg-textcolor);
         text-align: left;
+    }
+
+    @media only screen and (max-width: 1000px) {
+        position: relative;
     }
 }

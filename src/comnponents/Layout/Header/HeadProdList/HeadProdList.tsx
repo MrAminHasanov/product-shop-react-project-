@@ -13,8 +13,6 @@ function HeadProdList() {
   const handleClick = () => setListState(!listState);
   const iconClass = classNames({ [c.activeIcon]: listState })
 
-  // usePathEffect(setLof, false);
-
   return (
     <div className={c.component}>
       <button onClick={handleClick}>

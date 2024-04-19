@@ -1,5 +1,6 @@
 // import { useSelector } from "react-redux";
 
+import { useEffect, useState } from "react";
 import c from "./FavoriteSummary.module.scss";
 // import FavoriteUnbox from "./FavoriteUnbox/FavoriteUnbox";
 // import { productList } from "context/ProductContext/ProductContext";

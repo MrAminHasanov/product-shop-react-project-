@@ -1,25 +1,25 @@
 import React from 'react'
 import c from "./ProdList.module.scss"
+import DropDown from '@/comnponents/GlobalComnponets/DropDown/DropDown'
 
 function ProdList({ listState }: { listState: boolean }) {
     return (
-        <ul
-            className={c.component}
-            style={{ maxHeight: !listState ? 0 : "none" }}
-        >
-            <li>Fresh meat</li>
-            <li>Vegetebales</li>
-            <li>Fresh meat</li>
-            <li>Vegetebales</li>
-            <li>Fresh meat</li>
-            <li>Vegetebales</li>
-            <li>Fresh meat</li>
-            <li>Vegetebales</li>
-            <li>Fresh meat</li>
-            <li>Vegetebales</li>
-            <li>Fresh meat</li>
-            <li>Vegetebales</li>
-        </ul >
+        <DropDown dropDownAnimationState={listState}>
+            <ul className={c.component}>
+                <li>Fresh meat</li>
+                <li>Vegetebales</li>
+                <li>Fresh meat</li>
+                <li>Vegetebales</li>
+                <li>Fresh meat</li>
+                <li>Vegetebales</li>
+                <li>Fresh meat</li>
+                <li>Vegetebales</li>
+                <li>Fresh meat</li>
+                <li>Vegetebales</li>
+                <li>Fresh meat</li>
+                <li>Vegetebales</li>
+            </ul >
+        </DropDown>
     )
 }
 

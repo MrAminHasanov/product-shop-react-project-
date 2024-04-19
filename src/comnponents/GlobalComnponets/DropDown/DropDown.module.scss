@@ -1,0 +1,29 @@
+.component {
+    z-index: 2;
+    position: absolute;
+    top: 100%;
+    left: -1px;
+    overflow: hidden;
+    width: 100%;
+    left: 0%;
+}
+
+.content {
+    transition: .4s ease transform;
+    transform: translateY(-100%);
+    animation: dropDownAnimation .4s ease;
+}
+
+.activeDropDown {
+    transform: translateY(0%);
+}
+
+@keyframes dropDownAnimation {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
