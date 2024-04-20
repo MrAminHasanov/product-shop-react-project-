@@ -9,9 +9,9 @@
 }
 
 .content {
-    transition: .4s ease transform;
+    transition: var(--transitionTime) ease transform;
     transform: translateY(-100%);
-    animation: dropDownAnimation .4s ease;
+    animation: dropDownAnimation var(--transitionTime) ease;
 }
 
 .activeDropDown {
