@@ -1,0 +1,22 @@
+.component {
+    border: 1px solid var(--bd-color);
+    list-style: none;
+    max-height: 273px;
+    overflow-y: scroll;
+
+    @media only screen and (max-width: 570px) {
+        width: 150px;
+
+        li {
+            font-size: 16px;
+        }
+    }
+
+    &::-webkit-scrollbar {
+        width: 1px;
+
+        &-thumb {
+            background-color: var(--salat);
+        }
+    }
+}

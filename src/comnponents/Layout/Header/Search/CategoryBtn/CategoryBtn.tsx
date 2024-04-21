@@ -1,11 +1,11 @@
 'use client'
 
 import { useState } from "react";
-import c from "./HeadSearchCategoryBtn.module.scss";
+import c from "./CategoryBtn.module.scss";
 
 import CategoryList from "./CategoryList/CategoryList";
 
-function HeadSearchCategoryBtn() {
+function CategoryBtn() {
   const [categoryListState, setCategoryListState] = useState(false);
   const [activeCategory, setActiveCategory] = useState("All");
 
@@ -24,4 +24,4 @@ function HeadSearchCategoryBtn() {
   );
 }
 
-export default HeadSearchCategoryBtn;
+export default CategoryBtn;

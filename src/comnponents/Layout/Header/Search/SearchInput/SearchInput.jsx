@@ -1,11 +1,11 @@
 import { useContext } from "react";
 
-import c from "./HeadSearchInput.module.scss";
-import { HeadSearchContext } from "context/HeadSearchContext/HeadSearchContext";
-import HeadSearchInputProductLi from "./HeadSearchInputProductLi/HeadSearchInputProductLi";
+import c from "./SearchInput.module.scss";
+import { SearchContext } from "context/SearchContext/SearchContext";
+import SearchProduct from "./SearchProduct/SearchProduct";
 import { usePathEffect } from "hooks/usePathEffect";
 
-function HeadSearchInput() {
+function SearchInput() {
   const {
     searchProduct,
     setSearchProduct,
@@ -13,7 +13,7 @@ function HeadSearchInput() {
     inputExist,
     setInputExist,
     goShop,
-  } = useContext(HeadSearchContext);
+  } = useContext(SearchContext);
 
   usePathEffect(setSearchProduct, "");
 
@@ -39,11 +39,11 @@ function HeadSearchInput() {
       <ul>
         {inputExist &&
           filteredSearchProduct.map((product, key) => (
-            <HeadSearchInputProductLi key={key} product={product} />
+            <SearchProduct key={key} product={product} />
           ))}
       </ul>
     </div>
   );
 }
 
-export default HeadSearchInput;
+export default SearchInput;

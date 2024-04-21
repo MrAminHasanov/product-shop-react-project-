@@ -1,10 +1,10 @@
 import { useContext } from "react";
 
-import c from "./HeadSearchButton.module.scss";
-import { HeadSearchContext } from "context/HeadSearchContext/HeadSearchContext";
+import c from "./SearchBtn.module.scss";
+import { SearchContext } from "context/SearchContext/SearchContext";
 
-function HeadSearchButton() {
-  const { goShop } = useContext(HeadSearchContext);
+function SearchBtn() {
+  const { goShop } = useContext(SearchContext);
 
   return (
     <div className={c.component}>
@@ -16,4 +16,4 @@ function HeadSearchButton() {
   );
 }
 
-export default HeadSearchButton;
+export default SearchBtn;

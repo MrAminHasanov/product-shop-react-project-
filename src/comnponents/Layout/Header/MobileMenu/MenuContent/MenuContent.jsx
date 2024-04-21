@@ -1,19 +1,19 @@
 import {useEffect,useState  } from "react";
 import c from "./MenuContent.module.scss";
-import HeadLogo from "../../HeadLogo/HeadLogo";
-import HeadAccaount from "../../HeadAccaount/HeadAccaount";
+import Logo from "../../Logo/Logo";
+import Account from "../../Account/Account";
 import HeadNav from "../../HeadNav/HeadNav";
-import HeadContact from "../../HeadContact/HeadContact";
+import Contact from "../../Contact/Contact";
 
 function MenuContent() {
   const [menuPosition, setMenuPosition] = useState("-270PX");
   useEffect(() => setMenuPosition("0PX"), []);
   return (
     <div className={c.component} style={{ left: menuPosition }}>
-      <HeadLogo />
-      <HeadAccaount screenState={"mobileMenu"} />
+      <Logo />
+      <Account screenState={"mobileMenu"} />
       <HeadNav screenState={"mobileMenu"} />
-      <HeadContact />
+      <Contact />
     </div>
   );
 }

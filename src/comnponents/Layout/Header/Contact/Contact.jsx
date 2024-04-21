@@ -1,7 +1,7 @@
 import React from "react";
-import c from "./HeadContact.module.scss"
+import c from "./Contact.module.scss"
 
-function HeadContact({screenState}) {
+function Contact({screenState}) {
   return (
     <div className={c.component}
     style={screenState === "default" ? {"--defaultList":"flex" , "--mobileList":"none"} : {"--mobileList":"flex" , "--defaultList":"none"}}
@@ -15,4 +15,4 @@ function HeadContact({screenState}) {
   );
 }
 
-export default HeadContact;
+export default Contact;

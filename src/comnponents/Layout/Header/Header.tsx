@@ -1,28 +1,28 @@
 import c from "./Header.module.scss";
-import HeadLogo from "./HeadLogo/HeadLogo";
+import Logo from "./Logo/Logo";
 import HeadNav from "./HeadNav/HeadNav";
-import HeadAccaount from "./HeadAccaount/HeadAccaount";
-import HeadProdList from "./HeadProdList/HeadProdList";
-import HeadSearch from "./HeadSearch/HeadSearch";
-// import HeadContact from "./HeadContact/HeadContact";
+import Account from "./Account/Account";
+import Departaments from "./Departaments/Departaments";
+import Search from "./Search/Search";
+// import Contact from "./Contact/Contact";
 // import MobileMenu from "./MobileMenu/MobileMenu";
-// import HeadSearchProvider from "context/HeadSearchContext/HeadSearchContext";
+// import SearchProvider from "context/SearchContext/SearchContext";
 
 function Header() {
   return (
     <div className={c.component}>
-      <HeadLogo />
+      <Logo />
       <HeadNav
         // setMobileMenuState={setMobileMenuState}
         screenState={"default"}
       />
 
-      <HeadAccaount screenState={"default"} />
+      <Account screenState={"default"} />
 
-      <HeadProdList />
-      <HeadSearch />
+      <Departaments />
+      <Search />
 
-      {/* <HeadContact screenState={"default"} />
+      {/* <Contact screenState={"default"} />
       {true ? (
         <MobileMenu/>
       ) : null} */}

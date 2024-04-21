@@ -2,9 +2,9 @@ import { createContext, useEffect, useState } from "react";
 import { productList } from "context/ProductContext/ProductContext";
 import { useNavigate } from "react-router-dom";
 
-export const HeadSearchContext = createContext();
+export const SearchContext = createContext();
 
-function HeadSearchProvider(props) {
+function SearchProvider(props) {
   const [searchProduct, setSearchProduct] = useState("");
   const [productCategory, setProductCategory] = useState("All");
   const [filteredSearchProduct, setFilteredSearchProduct] = useState([]);
@@ -29,7 +29,7 @@ function HeadSearchProvider(props) {
     );
   }, [searchProduct, productCategory]);
   return (
-    <HeadSearchContext.Provider
+    <SearchContext.Provider
       value={{
         filteredSearchProduct,
         searchProduct,
@@ -42,8 +42,8 @@ function HeadSearchProvider(props) {
       }}
     >
       {props.children}
-    </HeadSearchContext.Provider>
+    </SearchContext.Provider>
   );
 }
 
-export default HeadSearchProvider;
+export default SearchProvider;

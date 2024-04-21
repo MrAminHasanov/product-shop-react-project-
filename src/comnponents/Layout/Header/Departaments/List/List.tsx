@@ -1,8 +1,8 @@
 import React from 'react'
-import c from "./ProdList.module.scss"
+import c from "./List.module.scss"
 import DropDown from '@/comnponents/GlobalComnponets/DropDown/DropDown'
 
-function ProdList({ listState }: { listState: boolean }) {
+function List({ listState }: { listState: boolean }) {
     return (
         <DropDown dropDownAnimationState={listState}>
             <ul className={c.component}>
@@ -23,4 +23,4 @@ function ProdList({ listState }: { listState: boolean }) {
     )
 }
 
-export default ProdList
+export default List

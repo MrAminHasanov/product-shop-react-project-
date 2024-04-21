@@ -3,12 +3,12 @@
 import { useState } from "react";
 import classNames from "classnames";
 
-import c from "./HeadProdlist.module.scss";
+import c from "./Departaments.module.scss";
 
 import { CgArrowRight } from "react-icons/cg";
-import ProdList from "./ProdList/ProdList";
+import List from "./List/List";
 
-function HeadProdList() {
+function Departaments() {
   const [listState, setListState] = useState(false);
   const handleClick = () => setListState(!listState);
   const iconClass = classNames({ [c.activeIcon]: listState })
@@ -22,9 +22,9 @@ function HeadProdList() {
           className={iconClass}
         />
       </button>
-      <ProdList listState={listState} />
+      <List listState={listState} />
     </div >
   );
 }
 
-export default HeadProdList;
+export default Departaments;

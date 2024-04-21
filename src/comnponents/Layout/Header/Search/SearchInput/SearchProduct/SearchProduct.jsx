@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import c from "./HeadSearchInputProductLi.module.scss";
+import c from "./SearchProduct.module.scss";
 
-function HeadSearchInputProductLi({ product }) {
+function SearchProduct({ product }) {
   const navigate = useNavigate();
   const onHandlClick = () => {
     // console.log("hi")
@@ -18,4 +18,4 @@ function HeadSearchInputProductLi({ product }) {
   );
 }
 
-export default HeadSearchInputProductLi;
+export default SearchProduct;

@@ -1,27 +1,22 @@
-import classNames from "classnames";
 import c from "./CategoryList.module.scss";
 import { productTypeList } from "@/context/ProductContext/ProductContext"
 import DropDown from "@/comnponents/GlobalComnponets/DropDown/DropDown";
+import Category from "./Category/Category";
 
 function CategoryList({ categoryListState, setActiveCategory, setCategoryListState, activeCategory }: componentProps) {
     const typeList = ["All", ...productTypeList.map((type) => type.name)];
-    const categoryClass =
-        (type: string): string =>
-            classNames(c.category, { [c.activeCategory]: activeCategory === type });
 
     return (
         <DropDown dropDownAnimationState={categoryListState}>
             <ul className={c.component}>
                 {
-                    typeList.map((type, key) => (
-                        <li
+                    typeList.map((categoryName, key) =>
+                        <Category
+                            setActiveCategory={setActiveCategory}
+                            setCategoryListState={setCategoryListState}
                             key={key}
-                            className={categoryClass(type)}>
-                            <button onClick={() => setActiveCategory(type)}>
-                                {type}
-                            </button>
-                        </li>
-                    ))
+                            isCategoryActive={categoryName === activeCategory}
+                            categoryName={categoryName} />)
                 }
             </ul>
         </DropDown>

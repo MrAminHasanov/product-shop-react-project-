@@ -1,7 +1,7 @@
 import logo from "../../../../img/logo(1).png";
-import c from "./HeadLogo.module.scss";
+import c from "./Logo.module.scss";
 
-function HeadLogo() {
+function Logo() {
   return (
     <>
       <div className={c.component}>
@@ -13,4 +13,4 @@ function HeadLogo() {
   );
 }
 
-export default HeadLogo;
+export default Logo;
